@@ -3,10 +3,17 @@
     margin: 0;
 }
 
-body{
+#index{
     background-image: url("./img/FormatoVertical/FondoVert1.jpeg");
+}
+
+body{
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+span{
+    font-weight: bolder;
 }
 
 header{
@@ -35,6 +42,7 @@ nav{
 nav a{
     text-decoration: none;
     text-align: center;
+    font-size: 2vh;
     color: #000;
     padding: 1vh;
     background-color: #fff;
@@ -114,6 +122,51 @@ tbody td:nth-child(odd) {
     color: #fff;
 }
 
-footer{
-    border: solid black 1px;
+/* PÁGINA 2 - CONOCE MÁS */
+
+#conocemas{
+    background-image: url("./img/FormatoVertical/FondoVert2.jpeg");
+}
+
+article{
+    border: solid #fff 1px;
+    width: 90vw;
+    margin: 0 auto;
+    margin-top: 4vh;
+}  
+
+section{
+    background-color: #ffffff71;
+    border-radius: 25px;
+    border: solid green 1px;
+}
+
+section > img{
+    border-radius: 15px;
+    width: 20vw;
+    margin: -2vh 2vw 4vh 2vw;
+    /* border: #fff solid 1px; */
+}
+
+/* SECTION IMG IZQUIERDA */
+
+.sectionImgLeft > h3{
+    text-transform:uppercase;
+    font-size: 1.3vw;
+    margin: 3vh 11vw 0 0;
+    text-align: right;
+    /* border: #fff solid 1px; */
+}
+
+.sectionImgLeft > p{
+    width: 60vw;
+    margin: 4vh 4vw 0 0;
+    text-align: justify;
+    float: right;
+    /* border: #fff solid 1px; */
+}
+
+/* SECTION IMG DERECHA */
+.sectionImgRight > img{
+    float: left;
 }
