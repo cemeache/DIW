@@ -122,14 +122,14 @@ tbody td:nth-child(odd) {
     color: #fff;
 }
 
-/* PÁGINA 2 - CONOCE MÁS */
+/* ---------PÁGINA 2 - CONOCE MÁS--------- */
 
 #conocemas{
     background-image: url("./img/FormatoVertical/FondoVert2.jpeg");
 }
 
 article{
-    border: solid #fff 1px;
+    /* border: solid #fff 1px; */
     width: 90vw;
     margin: 0 auto;
     margin-top: 4vh;
@@ -138,7 +138,8 @@ article{
 section{
     background-color: #ffffff71;
     border-radius: 25px;
-    border: solid green 1px;
+    border: solid #000 1px;
+    margin-bottom: 4vh;
 }
 
 section > img{
@@ -160,13 +161,101 @@ section > img{
 
 .sectionImgLeft > p{
     width: 60vw;
-    margin: 4vh 4vw 0 0;
+    margin: 3.2vh 4vw 0 0;
     text-align: justify;
     float: right;
+    font-size: 1.05vw;
     /* border: #fff solid 1px; */
 }
 
 /* SECTION IMG DERECHA */
 .sectionImgRight > img{
-    float: left;
+    float: right;
 }
+
+.sectionImgRight > h3{
+    text-transform:uppercase;
+    font-size: 1.3vw;
+    margin: 3vh 0vw 0 5vw;
+}
+
+.sectionImgRight > p{
+    width: 60vw;
+    margin: 3.2vh 0 4vh 3vw;
+    text-align: justify;
+    font-size: 1.05vw;
+    /* border: #fff solid 1px; */
+}
+
+/* ------COMPARTE TU EXPERIENCIA------- */
+
+#experiencia{
+    background-image: url("./img/FormatoVertical/FondoVert3.jpeg");
+}
+
+form{
+    background-color:#ffffff71;
+    width: 90vw;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+form > div{
+    margin: 2vh 0 5vh 0;
+    border: solid #ffffff00 1px;
+    width: 40vw;
+}
+
+legend{
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-weight: bolder;
+    font-size: 3vh;
+    margin: 0 0 2vh 3vw;
+    padding-top: 1.6vh
+}
+
+label{
+    display: block;
+    font-size: 2.5vh;
+    margin: 4vh 5vw 5vh 5vw;
+    width: 25vw;
+}
+
+#suceso{
+    float: right;
+    width: 40vw;
+    margin: -48vh 5vw 0 -40vw;
+}
+
+textarea{
+    /* float: right; */
+    width: 40vw;
+    height: 30vh;
+    border-radius: 15px;
+}
+
+#recomendaciones{
+    width: 90vw;
+    margin: 0 auto;
+    background-color: #ffffff71;
+    border-radius: 15px;
+    margin-bottom: 5vh;
+}
+
+#recomendaciones > h3{
+    text-transform: uppercase;
+    font-size: 3vh;
+    margin: 2vh 0 2vh 0;
+    padding-top: 1.6vh;
+    text-align: center;
+}
+
+#recomendaciones > ul{
+    font-size: 1.2vw;
+} 
+
+/* li, ul {
+    margin: initial;
+    padding: initial;
+} */
