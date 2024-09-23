@@ -1,20 +1,27 @@
+<!-- CELIA MORUNO HERROJO -->
 <html>
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="./style.css">
         <title>Comparte tu experiencia</title>
     </head>
+    <!--Body con id ya que cada página lleva diferente background-->
     <body id="experiencia">
+        <!-- Cabecera -->
         <header>
+            <!-- Logo de la web -->
             <a href="./index.html"><img id="logo" src="./img/FormatoCuadrado/Logo.jpeg"></a>
+            <!-- Menú principal de la web -->
             <nav> 
                 <a href="./experiencia.html">COMPARTE TU EXPERIENCIA</a>
                 <a href="./conocemas.html">CONOCE MÁS</a>
                 <a href="./index.html">INICIO</a>
             </nav>
         </header>
+        <!--Formulario para compartir experiencias vividas sobre fenñomenos meteorológicos-->
         <form>
             <legend>Comparte tu experiencia</legend>
+            <!--Contenedor dónde se encuentran todos los elementos situados a la izquierda del form-->
             <div>
                 <label>Nombre: <input type="text" name="nombre"></label>
                 <label>Apellidos: <input type="text" name="apellidos"></label>
@@ -25,8 +32,14 @@
                     <input type="radio" name="sexo" value="mujer">Mujer
                 </label>
             </div>
+            <!--TextArea situado a la derecha del form-->
             <label id="suceso">Describe lo ocurrido: <textarea name="experiencia"></textarea></label>
+            <!--Botones para enviar o borrar el contenido del formulario-->
+            <input type="reset" value="Borrar">
+            <input type="submit" value="Enviar">
         </form>
+        <!--Contenedor con listas anidadas donde se dan recomendaciones para afrontar 
+            los fenómenos meteorológicos-->
         <div id="recomendaciones">
             <h3>Recomendaciones para afrontar los fenómenos meteorológicos</h3>
             <ul>
