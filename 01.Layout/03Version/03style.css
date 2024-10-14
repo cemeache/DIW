@@ -1,0 +1,77 @@
+body{
+    margin: 0;
+    margin-top: 45px;
+    width: 1260px;
+    border: solid 1px #000;
+    /* background-color: red; */
+}
+
+/*LAYOUT*/
+
+main{
+    background-color: yellow;
+    display: flow-root;
+    margin-left:20px;
+    margin-right:20px;
+    /*min-height: 400px; Si no no lo vemos ya que al estar flotada las cajas 'no las ve' */
+}
+
+/*--------ELEMENTOS DEL LAYOUT---------*/
+
+#div-left{
+    background-color:rgb(151, 216, 82);
+    width: 780px; /*800px - 20px(10px+10px)padding*/
+    height: 370px; /*400px - 30px padding*/
+    padding: 30px 10px 0 10px;
+    float: left;
+}
+
+#div-right{
+    width: 150px; /*400px - 30px padding - 220px padding*/
+    height: 150px;/*400px - 50px padding*/
+    padding: 50px 220px 200px 30px;
+    background-color:rgb(205, 101, 101);
+    margin-left:20px;
+    float: left;
+}
+
+footer{
+    clear: both;
+    height: 100px;
+    background-color: rgb(110, 114, 252);
+    width: 1260px;
+    border-top: solid 1px #000;
+}
+
+/*-------ELEMENTOS DE LA CAJA IZQUIERDA--------*/
+
+p{
+    text-align: justify;
+}
+
+form{
+    margin-top: 4em;
+    border: solid 1px #000;
+    padding:1em 1em 0 70px;
+}
+
+input{
+    display: block;
+}
+
+input[type="text"]{
+    width: 490px;/*500px - 10px padding*/
+    padding-left:10px;
+}
+
+input[type="submit"]{
+    width: 150px;
+    height: 2em; /*Doble del tamaño base de la letra*/
+    background-color: #D8D8D8;
+}
+
+/*------ELEMENTOS DE LA CAJA DERECHA-------*/
+
+img{
+    width: 100%;
+}
