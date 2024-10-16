@@ -78,7 +78,7 @@ input[type="submit"]{
 }
 
 #div-one{
-    position: absolute;
+    position: absolute; /*Situar tomando como referencia div-right*/
     top:20px;
     left:20px;
     z-index: 1;
@@ -86,7 +86,7 @@ input[type="submit"]{
 }
 
 #div-two{
-    position: absolute;
+    position: absolute; /*Situar tomando como referencia div-right*/
     top:40px;
     left:40px;
     z-index: 0;
