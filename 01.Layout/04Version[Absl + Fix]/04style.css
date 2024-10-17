@@ -1,6 +1,6 @@
 /* Position ABSOLUTE y FIXED
     Fixed --> Fijar el nav en la posición que definamos
-    Absoluted --> Posicionar el h1 del contenedor derecho en medio del contenedor aún estando como primer elemento en el html */
+    Absoluted --> Posicionar el div pegado aunque su contenido crezca*/
 
 body{
     margin: 0;
@@ -14,7 +14,7 @@ body{
 
 main{
     margin-top: 100px; /*Para que su contenido no sea tapado con el nav al inicio*/
-    background-color: yellow;
+    /* background-color: yellow; */
     display: flow-root; 
     margin-left:20px;
     margin-right:20px;
@@ -42,9 +42,22 @@ nav{
 #div-right{
     width: 340px; /*400px - 60px(30px+30px)padding*/
     padding: 0 30px;
+    padding-top: 30px;
     background-color:rgb(205, 101, 101);
     margin-left:20px;
     float: left; /*Para poder alinear los contenedores [elmt bloque] en la misma 'línea'*/
+}
+
+#div-blue{
+    clear: both;
+    width: 840px;
+    background-color: #ddf748;
+    position: absolute;
+    bottom: 50px;
+}
+
+#div-blue > p{
+    text-align: center;
 }
 
 footer{
