@@ -26,6 +26,7 @@ main{
     width: 780px; /*800px - 20px(10px+10px)padding*/
     height: 370px; /*400px - 30px padding*/
     padding: 30px 10px 0 10px;
+    margin-top: 100px; /*Para ver mejor el efecto del sticky*/
     float: left; /*Para poder alinear los contenedores [elmt bloque] en la misma 'línea'*/
     position: sticky; /*Una vez que haga scroll el div izquierdo se queda fijado arriba*/
     top: 20px; /*Distancia desde donde se quedará fijado*/
