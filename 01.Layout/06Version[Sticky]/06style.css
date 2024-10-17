@@ -35,6 +35,7 @@ main{
 #div-right{
     width: 340px; /*400px - 60px(30px+30px)padding*/
     padding: 0 30px;
+    padding-top: 30px;
     background-color:rgb(205, 101, 101);
     margin-left:20px;
     float: left; /*Para poder alinear los contenedores [elmt bloque] en la misma 'línea'*/
