@@ -29,6 +29,7 @@ nav{
     position: fixed; /*Para que no 'lo perdamos de vista', aunque hagamos scroll siempre seguirá en la misma posición*/
         top: 45px; /*Margin que tiene dado el body frente al main ya que al poner position fixed, lo situamos con respecto al body*/
     border: solid 1px #000;
+    z-index: 5;
 }
 
 #div-left{
