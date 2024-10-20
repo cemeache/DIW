@@ -25,18 +25,17 @@ main{
     width: 63.49%; /*1260px -- 800px[63.49%]*/
     height: 370px; /*400px - 30px padding*/
     /* padding: 30px 10px 0 10px; */
-    padding: 3.75% 1.25% 0 1.25%;
+    padding: 30px 1.25% 0 1.25%;
     float: left;
 }
 
 #div-right{
     /* width: 400px;*/
     width: 31.75%; /*1260px -- 400px[31.75%]*/
-    height: 400px;/*400px - 50px padding [Foto]*/
-    /* padding: 50px 220px 200px 30px; [Foto]*/
+    height: 400px;
     background-color:rgb(205, 101, 101);
     /* margin-left:20px; */
-    margin-left:1.59%; /*1260px -- 20px[1.59%]*/
+    margin-left:1.58%; /*1260px -- 20px[1.58%]*/
     float: left;
 }
 
