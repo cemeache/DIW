@@ -25,7 +25,7 @@ main{
     width: 63.49%; /*1260px -- 800px[63.49%]*/
     height: 370px; /*400px - 30px padding*/
     /* padding: 30px 10px 0 10px; */
-    padding: 30px 1.25% 0 1.25%;
+    padding: 30px 1.25% 0 1.25%; /*800px -- 10px [1.25%]*/
     float: left;
 }
 
