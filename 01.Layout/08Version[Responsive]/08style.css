@@ -22,20 +22,20 @@ main{
 #div-left{
     background-color:rgb(151, 216, 82);
     /* width: 780px; 800px - 20px(10px+10px)padding */
-    width: 63.49%; /*1260px -- 800px[63.49%]*/
+    width: 63.93%; /*1220px -- 800px[63.93%]*/
     height: 370px; /*400px - 30px padding*/
     /* padding: 30px 10px 0 10px; */
-    padding: 30px 1.25% 0 1.25%; /*800px -- 10px [1.25%]*/
+    padding: 30px 0.82% 0 0.82%; /*1220px -- 10px [0.20%]*/
     float: left;
 }
 
 #div-right{
     /* width: 400px;*/
-    width: 31.75%; /*1260px -- 400px[31.75%]*/
+    width: 32.79%; /*1220px -- 400px[32.79%]*/
     height: 400px;
     background-color:rgb(205, 101, 101);
     /* margin-left:20px; */
-    margin-left:1.58%; /*1260px -- 20px[1.58%]*/
+    margin-left:1.64%; /*1220px -- 20px[1.64%]*/
     float: left;
 }
 
