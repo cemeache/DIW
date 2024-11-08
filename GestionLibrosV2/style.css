@@ -33,54 +33,45 @@ nav{
     color: white;
 }
 
-nav > a{
+nav a, nav p{
     color:#fff;
     text-decoration: none;
     float: left;
     margin: 6vh 10vw;
 }
 
-nav > ul{
-    list-style-type: none;
-    float: left;
-    margin: 6vh 10vw;
-}
-
-nav ul li{
+nav p{
     position: relative;
 }
 
-#sub-lista{
+nav div{
     display: none;
     position: absolute;
-    top: 100%;
-    left: -1.6vw;
-    background-color: #006293;
-    color: #fff;
-    list-style-type: none;
+    top: 6vh;
+    left: 9vw;
+    position: relative;
 }
 
-#sub-lista li{
-    display: block;
+nav div a{
+    padding: 0 1vw;
 }
 
-#submenu:hover #sub-lista{
-    display: block;
+nav p:hover{
+    opacity: 0;
 }
 
-#submenu:hover #sub-lista li{
-    padding: 1.5vh 2vw;
-}
-
-#submenu:hover #sub-lista li a{
-    text-decoration: none;
-    color: #fff;
-    font-size: 0.9em;
+nav p:hover div{
+    display:block;
 }
 
 main{
     height: 200px;
 }
+
+nav div a {
+    margin: 0;
+}
+
 
 /*  FOOTER  */
 footer{
