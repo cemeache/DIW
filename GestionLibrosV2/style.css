@@ -33,43 +33,45 @@ nav{
     color: white;
 }
 
-nav a, nav p{
-    color:#fff;
+nav > a, #gestion {
+    color: #fff;
     text-decoration: none;
     float: left;
     margin: 6vh 10vw;
 }
 
-nav p{
-    position: relative;
-}
-
-nav div{
+#submenu{
+    height: auto;
+    width: auto;
     display: none;
     position: absolute;
-    top: 6vh;
-    left: 9vw;
-    position: relative;
+        top: 6vh;
+        left: 79vw;
 }
 
-nav div a{
-    padding: 0 1vw;
+#submenu a{
+    color: #fff;
+    text-decoration: none;
+    padding-right:  1vw;
 }
 
-nav p:hover{
-    opacity: 0;
+#submenu a:nth-child(2){
+    border-left: 1px solid #fff;
+    padding-left: 1vw;
 }
 
-nav p:hover div{
-    display:block;
+#gestion:hover{
+    display: none;
 }
+
+#gestion:hover + #submenu{
+    display: block;
+}
+
+/*  MAIN  */
 
 main{
     height: 200px;
-}
-
-nav div a {
-    margin: 0;
 }
 
 
