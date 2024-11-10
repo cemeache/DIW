@@ -33,53 +33,71 @@ nav{
     color: white;
 }
 
-nav > a{
-    color:#fff;
+nav > a, #gestion {
+    color: #fff;
     text-decoration: none;
     float: left;
     margin: 6vh 10vw;
 }
 
-nav > ul{
-    list-style-type: none;
-    float: left;
-    margin: 6vh 10vw;
-}
-
-nav ul li{
-    position: relative;
-}
-
-#sub-lista{
+#submenu{
+    height: auto;
+    width: auto;
     display: none;
     position: absolute;
-    top: 100%;
-    left: -1.6vw;
-    background-color: #006293;
+        top: 6vh;
+        left: 79vw;
+}
+
+#submenu a{
     color: #fff;
-    list-style-type: none;
-}
-
-#sub-lista li{
-    display: block;
-}
-
-#submenu:hover #sub-lista{
-    display: block;
-}
-
-#submenu:hover #sub-lista li{
-    padding: 1.5vh 2vw;
-}
-
-#submenu:hover #sub-lista li a{
     text-decoration: none;
-    color: #fff;
-    font-size: 0.9em;
+    padding-right:  1vw;
 }
+
+#submenu a:nth-child(2){
+    border-left: 1px solid #fff;
+    padding-left: 1vw;
+}
+
+#gestion:hover{
+    display: none;
+}
+
+#gestion:hover + #submenu{
+    display: block;
+}
+
+/*  MAIN  */
 
 main{
-    height: 200px;
+    width: 90%;
+    margin: 2.5% auto;
+    border-bottom: #000 solid 1px;
+}
+
+main > h1{
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.botones{
+    display: inline-block;
+    border: #006293 1px solid;
+    border-radius: 20px;
+    width: 15%;
+    padding: 1%;
+    text-align: center;
+    margin: 2.5% 6.5%; 
+}
+
+.botones:first-of-type{
+    margin-left: 11%;
+}
+
+.botones img{
+    width: 80%;
+    border-bottom: 1px solid #00000091;
 }
 
 /*  FOOTER  */
@@ -91,8 +109,6 @@ footer{
     overflow: hidden;
     padding: 2%;
     border: 1px solid black;
-    position: absolute;
-        bottom: 0;
 }
 
 footer p, footer div{
