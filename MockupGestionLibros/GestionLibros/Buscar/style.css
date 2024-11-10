@@ -40,6 +40,10 @@ nav > a, #gestion {
     margin: 6vh 10vw;
 }
 
+/* nav:nth-last-child(){
+    margin-right: 0;
+} */
+
 #submenu{
     height: auto;
     width: auto;
