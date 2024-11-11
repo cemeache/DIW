@@ -207,3 +207,48 @@ footer span{
     display: block;
     margin-top: 2%;
 }
+
+@media (width <= 1224px) {
+    main > h1{
+        font-size: 2em;
+    }
+
+    article > img{
+        margin: 6% 0;
+        width: 28%;
+        margin-left: 5%;
+    }
+
+    .bbdd{
+        width: 50%;
+        top: 1%;
+        left: 35%;
+    }
+    
+    .bbdd p{
+        font-size: 2em;
+    }
+
+    article .botones{
+        width: 10%;
+    }
+
+    article .botones figcaption{
+        font-size: 1.2em;
+    }
+
+    article .botones:nth-of-type(2){
+        position:absolute;
+        top: unset;
+        bottom: 10%;
+        right:23%;
+    }
+    
+    article .botones:first-of-type{
+        position:absolute;
+        top: unset;
+        bottom: 10%;
+        right: 40%;
+    }
+
+}
