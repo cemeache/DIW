@@ -1,0 +1,261 @@
+/* Reset de márgenes y padding, y ajuste de tamaño de fuente */
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 1.2vw;
+}
+
+/* HEADER */
+header{
+    width: 100%;
+    height: 15vh;
+    border-bottom: 1px solid black;
+}
+
+header div{
+    width: 20%;
+    float: left;
+    height: 100%;
+    margin: auto;
+}
+
+header img{
+    display: block;
+    height: 100%;
+    margin: auto;
+}
+
+/* Estilos para el nav */
+nav{
+    width: 80%;
+    height: 100%;
+    float: right;
+    background-color: #006293;
+    color: white;
+}
+
+nav > a, #gestion {
+    color: #fff;
+    text-decoration: none;
+    float: left;
+    margin: 6vh 10vw;
+}
+
+/* Submenú oculto por defecto */
+#submenu{
+    height: auto;
+    width: auto;
+    display: none;
+    position: absolute;
+    top: 6vh;
+    left: 79vw;
+}
+
+#submenu a{
+    color: #fff;
+    text-decoration: none;
+    padding-right:  1vw;
+}
+
+#submenu a:nth-child(2){
+    border-left: 1px solid #fff;
+    padding-left: 1vw;
+}
+
+/* Mostrar submenú al pasar el ratón sobre "GESTIÓN LIBROS" */
+#gestion:hover{
+    display: none;
+}
+
+#gestion:hover + #submenu{
+    display: block;
+}
+
+/* MAIN */
+main{
+    width: 90%;
+    margin: 2.5% auto;
+    border-bottom: #000 solid 1px;
+}
+
+main > h1{
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/* Estilos para los botones */
+.botones{
+    display: inline-block;
+    border: #006293 1px solid;
+    border-radius: 20px;
+    width: 15%;
+    padding: 1%;
+    text-align: center;
+    margin: 2.5% 6.5%; 
+}
+
+.botones:first-of-type{
+    margin-left: 11%;
+}
+
+.botones img{
+    width: 80%;
+    border-bottom: 1px solid #00000091;
+}
+
+.botones a{
+    text-decoration: none;
+    color: black;
+}
+
+/* Estilos para el formulario */
+form{
+    margin: 2% auto;
+    width: 85%;
+}
+
+form fieldset{
+    border-radius: 10px;
+}
+
+form legend img {
+    width: 4%;
+    margin: 0 2%;
+}
+
+form legend h1{
+    display: inline-block;
+    font-size: 1.6em;
+}
+
+form label{
+    display: block;
+    margin: 2% 0;
+    margin-left: 10%;
+}
+
+form input, form select{
+    display: inline-block;
+}
+
+/* Alinear los primeros tres inputs del formulario */
+form label:nth-of-type(-n+3) { /* -n+3 selecciona los tres primeros elementos | -n --> todos los elementos +3 --> hasta el tercer elemento */
+    position: relative;
+}
+
+form label:nth-of-type(-n+3) input {
+    position: absolute;
+    left: 12%;
+}
+
+/* Márgenes para los campos del formulario */
+form select:first-child {
+    margin-left: 5%;
+}
+
+form select:last-of-type {
+    margin-left: 5%;
+}
+
+/* Estilos para el botón de enviar */
+form input[type="submit"]{
+    width: 41%;
+    padding: 1%;
+    border-radius: 10px;
+    color: #fff;
+    margin-left: 10%;
+    margin-top: 0.8%;
+    margin-bottom: 3%;
+    background-color: #599ABA;
+}
+
+form input[type="submit"]:hover {
+    background-color: #006293;
+    cursor: pointer;
+}
+
+/* FOOTER */
+footer{
+    width: 95.89%;
+    background-color: #006293;
+    color: white;
+    clear: both;
+    overflow: hidden;
+    padding: 2%;
+    border: 1px solid black;
+}
+
+footer p, footer div{
+    width: 30%;
+    float: left;
+    margin: 0 1.5%;
+}
+
+footer span{
+    font-weight: bold;
+    font-size: 1.5vw;
+}
+
+#p-contactar{
+    margin-left: 8%;
+    border-right: 1px solid white;
+    padding: 0.5% 0;
+}
+
+#p-colaboradores{
+    border-right: 1px solid white;
+}
+
+#p-colaboradores ul{
+    list-style-type: none;
+}
+
+#p-politicas{
+    margin-top: 2%;
+    width: 20%;
+}
+
+#p-politicas a{
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin-top: 2%;
+}
+
+@media (width <= 1220px) {
+    main > h1{
+        font-size: 2em;
+    }
+
+    .botones{
+        width: 20%;
+        margin: 2.5% 3.5%;
+    }
+
+    .botones figcaption{
+        font-size: 1.5vw;
+    }
+
+    form legend h1{
+        font-size: 2em;
+    }
+
+    form label, form input, form select {
+        font-size: 1.3em;
+        margin-left: 20%;
+    }
+
+    form label:first-of-type{
+        margin-top: 3%;
+    }
+
+    form label:nth-of-type(-n+3) input {
+        left: 4%;
+    }
+
+    form input[type="submit"] {
+        width: 58.5%;
+        margin-left: 20%;
+        border-radius: 8px;
+    }
+}
