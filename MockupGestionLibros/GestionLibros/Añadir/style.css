@@ -1,11 +1,11 @@
+/* Reset de márgenes y padding, y ajuste de tamaño de fuente */
 *{
     margin: 0;
     padding: 0;
     font-size: 1.2vw;
 }
 
-/*  NAV  */
-
+/* Estilos para el encabezado y navegación */
 header{
     width: 100%;
     height: 15vh;
@@ -40,17 +40,14 @@ nav > a, #gestion {
     margin: 6vh 10vw;
 }
 
-/* nav:nth-last-child(){
-    margin-right: 0;
-} */
-
+/* Submenú oculto por defecto */
 #submenu{
     height: auto;
     width: auto;
     display: none;
     position: absolute;
-        top: 6vh;
-        left: 79vw;
+    top: 6vh;
+    left: 79vw;
 }
 
 #submenu a{
@@ -64,6 +61,7 @@ nav > a, #gestion {
     padding-left: 1vw;
 }
 
+/* Mostrar submenú al pasar el ratón sobre "GESTIÓN LIBROS" */
 #gestion:hover{
     display: none;
 }
@@ -72,8 +70,7 @@ nav > a, #gestion {
     display: block;
 }
 
-/*  MAIN  */
-
+/* Estilos para el contenido principal */
 main{
     width: 90%;
     margin: 2.5% auto;
@@ -85,6 +82,7 @@ main > h1{
     text-align: center;
 }
 
+/* Estilos para los botones */
 .botones{
     display: inline-block;
     border: #006293 1px solid;
@@ -104,6 +102,12 @@ main > h1{
     border-bottom: 1px solid #00000091;
 }
 
+.botones a{
+    text-decoration: none;
+    color: black;
+}
+
+/* Estilos para el formulario */
 form{
     margin: 2% auto;
     width: 85%;
@@ -116,13 +120,11 @@ form fieldset{
 form legend img {
     width: 4%;
     margin: 0 2%;
-    /* border: solid #000 1px; */
 }
 
 form legend h1{
     display: inline-block;
     font-size: 1.6em;
-    /* border: #000 solid 1px; */
 }
 
 form label{
@@ -135,13 +137,28 @@ form input, form select{
     display: inline-block;
 }
 
-/*MARGIN CAMPOS FORM*/
+/* Alinear los primeros tres inputs del formulario */
+form label:nth-of-type(-n+3) { /* -n+3 selecciona los tres primeros elementos | -n --> todos los elementos +3 --> hasta el tercer elemento */
+    position: relative;
+}
+
+form label:nth-of-type(-n+3) input {
+    position: absolute;
+    left: 12%;
+}
+
+/* Márgenes para los campos del formulario */
 form select:first-child {
     margin-left: 5%;
 }
 
+form select:last-of-type {
+    margin-left: 5%;
+}
+
+/* Estilos para el botón de enviar */
 form input[type="submit"]{
-    width: 30%;
+    width: 41%;
     padding: 1%;
     border-radius: 10px;
     color: #fff;
@@ -151,7 +168,12 @@ form input[type="submit"]{
     background-color: #599ABA;
 }
 
-/*  FOOTER  */
+form input[type="submit"]:hover {
+    background-color: #006293;
+    cursor: pointer;
+}
+
+/* Estilos para el pie de página */
 footer{
     width: 95.89%;
     background-color: #006293;
