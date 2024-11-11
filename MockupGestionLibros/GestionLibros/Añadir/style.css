@@ -5,7 +5,7 @@
     font-size: 1.2vw;
 }
 
-/* Estilos para el encabezado y navegación */
+/* HEADER */
 header{
     width: 100%;
     height: 15vh;
@@ -25,6 +25,7 @@ header img{
     margin: auto;
 }
 
+/* Estilos para el nav */
 nav{
     width: 80%;
     height: 100%;
@@ -70,7 +71,7 @@ nav > a, #gestion {
     display: block;
 }
 
-/* Estilos para el contenido principal */
+/* MAIN */
 main{
     width: 90%;
     margin: 2.5% auto;
@@ -173,7 +174,7 @@ form input[type="submit"]:hover {
     cursor: pointer;
 }
 
-/* Estilos para el pie de página */
+/* FOOTER */
 footer{
     width: 95.89%;
     background-color: #006293;
