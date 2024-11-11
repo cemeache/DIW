@@ -212,3 +212,44 @@ footer span{
     display: block;
     margin-top: 2%;
 }
+
+/*Media Queries*/
+@media (width <= 1220px) {
+    main > h1{
+        font-size: 2em;
+    }
+
+    .botones{
+        width: 20%;
+        margin: 2.5% 3.5%;
+    }
+
+    .botones figcaption{
+        font-size: 1.5vw;
+    }
+
+    form legend h1{
+        font-size: 2em;
+    }
+
+    form label, form input, form select {
+        font-size: 1.3em;
+        margin-left: 23%;
+    }
+
+    form label:first-of-type{
+        margin-top: 3%;
+    }
+
+    form fieldset label:nth-of-type(-n+2) select,
+    form fieldset label:nth-of-type(3) input {
+        position: absolute;
+        left: 6%;
+    }
+
+    form input[type="submit"] {
+        width: 52.5%;
+        margin-left: 23%;
+        border-radius: 8px;
+    }
+}
