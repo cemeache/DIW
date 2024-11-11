@@ -1,4 +1,4 @@
-
+/*Estilos generales*/
 *{
     margin: 0;
     padding: 0;
@@ -25,7 +25,7 @@ footer{
     background-color: #006293;
 }
 
-/* ----------------------- CABECERA ----------------------- */
+/* ----------------------- HEADER ----------------------- */
 
 header div{
     float: left;
@@ -98,7 +98,7 @@ main > h1{
     text-align: center;
 }
 
-/* Estilos para los botones */
+/* Estilos para los botones principales*/
 .botones{
     display: inline-block;
     border: #006293 1px solid;
@@ -153,22 +153,18 @@ form input, form select{
     display: inline-block;
 }
 
+
 /* Alinear los primeros tres inputs del formulario */
 form label:nth-of-type(-n+3) {
     position: relative;
 }
-
-form label:nth-of-type(-n+3) input {
+/*----Form añadir*/
+#añadir label:nth-of-type(-n+3) input {
     position: absolute;
     left: 12%;
 }
 
-/* Márgenes para los campos del formulario */
-form select:first-child {
-    margin-left: 5%;
-}
-
-form select:last-of-type {
+#añadir select:last-of-type {
     margin-left: 5%;
 }
 
@@ -184,9 +180,27 @@ form input[type="submit"]{
     background-color: #599ABA;
 }
 
+/*----Form buscar*/
+#buscar fieldset label:nth-of-type(-n+2) select,
+#buscar fieldset label:nth-of-type(3) input {
+    position: absolute;
+    left: 12%;
+}
+
+#buscar input[type="submit"]{
+    width: 29%;
+}
+
 form input[type="submit"]:hover {
     background-color: #006293;
     cursor: pointer;
+}
+
+
+/*---LISTAR---*/
+hr{
+    width: 90%;
+    margin: 2% 0 2% 5%;
 }
 
 /* Estilo para la section */
@@ -222,6 +236,11 @@ article > img{
     margin: 3% 0;
     width: 18%;
     margin-left: 42%;
+}
+
+article .botones{
+    width: 7%;
+    margin: unset;
 }
 
 article .botones:nth-of-type(2){
@@ -330,18 +349,26 @@ footer div:nth-child(3) a{
         margin-left: 20%;
     }
 
+    form input{
+        margin-left: 10%;
+    }
+
     form label:first-of-type{
         margin-top: 3%;
     }
 
     form label:nth-of-type(-n+3) input {
-        left: 4%;
+        left: 5%;
     }
 
     form input[type="submit"] {
         width: 58.5%;
         margin-left: 20%;
         border-radius: 8px;
+    }
+
+    #buscar input[type="submit"] {
+        width: 56%;
     }
 
     footer div, footer h3, footer p, footer a {

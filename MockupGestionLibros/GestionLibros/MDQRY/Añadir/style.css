@@ -1,3 +1,4 @@
+/*Estilos generales*/
 *{
     margin: 0;
     padding: 0;
@@ -5,7 +6,6 @@
 }
 
 /*  HEADER  */
-
 header{
     width: 100%;
     height: 15vh;
@@ -25,7 +25,7 @@ footer{
     background-color: #006293;
 }
 
-/* ----------------------- CABECERA ----------------------- */
+/* ----------------------- HEADER ----------------------- */
 
 header div{
     float: left;
@@ -85,6 +85,7 @@ nav > a, #gestion {
     display: block;
 }
 
+
 /* MAIN */
 main{
     width: 90%;
@@ -97,7 +98,7 @@ main > h1{
     text-align: center;
 }
 
-/* Estilos para los botones */
+/* Estilos para los botones principales*/
 .botones{
     display: inline-block;
     border: #006293 1px solid;
@@ -152,22 +153,18 @@ form input, form select{
     display: inline-block;
 }
 
+
 /* Alinear los primeros tres inputs del formulario */
-form label:nth-of-type(-n+3) { /* -n+3 selecciona los tres primeros elementos | -n --> todos los elementos +3 --> hasta el tercer elemento */
+form label:nth-of-type(-n+3) {
     position: relative;
 }
-
-form label:nth-of-type(-n+3) input {
+/*----Form añadir*/
+#añadir label:nth-of-type(-n+3) input {
     position: absolute;
     left: 12%;
 }
 
-/* Márgenes para los campos del formulario */
-form select:first-child {
-    margin-left: 5%;
-}
-
-form select:last-of-type {
+#añadir select:last-of-type {
     margin-left: 5%;
 }
 
@@ -183,12 +180,94 @@ form input[type="submit"]{
     background-color: #599ABA;
 }
 
+/*----Form buscar*/
+#buscar fieldset label:nth-of-type(-n+2) select,
+#buscar fieldset label:nth-of-type(3) input {
+    position: absolute;
+    left: 12%;
+}
+
+#buscar input[type="submit"]{
+    width: 29%;
+}
+
 form input[type="submit"]:hover {
     background-color: #006293;
     cursor: pointer;
 }
 
+
+/*---LISTAR---*/
+hr{
+    width: 90%;
+    margin: 2% 0 2% 5%;
+}
+
+/* Estilo para la section */
+section{
+    width: 85%;
+    margin: 0 auto;
+}
+
+/* Estilo para los article */
+article{
+    width: 100%;
+    border: #000 solid 1px;
+    border-radius: 15px;
+    margin-top: 5%;
+    position: relative;
+}
+
+/* Estilo para los datos extraidos de la bbdd */
+.bbdd{
+    width: 33%;
+    margin: 5% 3% 5% 5%;
+    float: left;
+    position: absolute;
+    top: 10%;
+}
+
+.bbdd p{
+    margin: 1%;
+    font-size: 1.2em;
+}
+
+article > img{
+    margin: 3% 0;
+    width: 18%;
+    margin-left: 42%;
+}
+
+article .botones{
+    width: 7%;
+    margin: unset;
+}
+
+article .botones:nth-of-type(2){
+    position:absolute;
+    top: 30%;
+    right: 8%;
+}
+
+article .botones:first-of-type{
+    position:absolute;
+    top: 30%;
+    right: 22%;
+}
+
+article .botones figcaption{
+    font-size: 1vw;
+}
+
 /* FOOTER */
+footer{
+    width: 100%;
+    height: 20vh;
+    color: white;
+    clear: both;
+    background-color: #006293;
+}
+
 footer div{
     float: left;
     width: 31%;
@@ -228,6 +307,7 @@ footer div:nth-child(3) a{
     color: white;
 }
 
+/* Media Queries */
 @media (width <= 1220px) {
     header div{
         width: 18%;
@@ -269,12 +349,16 @@ footer div:nth-child(3) a{
         margin-left: 20%;
     }
 
+    #añadir input{
+        margin-left: 10%;
+    }
+
     form label:first-of-type{
         margin-top: 3%;
     }
 
     form label:nth-of-type(-n+3) input {
-        left: 4%;
+        left: 5%;
     }
 
     form input[type="submit"] {
@@ -283,11 +367,64 @@ footer div:nth-child(3) a{
         border-radius: 8px;
     }
 
+    #buscar label{
+        margin-left: 24%;
+    }
+
+    #buscar fieldset label:nth-of-type(-n+2) select,
+    #buscar fieldset label:nth-of-type(3) input {
+        position: absolute;
+        left: 6.5%;
+    }
+
+    #buscar input[type="submit"] {
+        margin-left: 24%;
+        width: 50.5%;
+    }
+
     footer div, footer h3, footer p, footer a {
         font-size: 1.4em;
     }
 
     footer ul li{
         font-size: 1.8em;
+    }
+
+    article > img{
+        margin: 6% 0;
+        width: 28%;
+        margin-left: 5%;
+    }
+
+    .bbdd{
+        width: 50%;
+        top: 1%;
+        left: 35%;
+    }
+    
+    .bbdd p{
+        font-size: 2em;
+    }
+
+    article .botones{
+        width: 10%;
+    }
+
+    article .botones figcaption{
+        font-size: 1.2em;
+    }
+
+    article .botones:nth-of-type(2){
+        position:absolute;
+        top: unset;
+        bottom: 10%;
+        right:23%;
+    }
+    
+    article .botones:first-of-type{
+        position:absolute;
+        top: unset;
+        bottom: 10%;
+        right: 40%;
     }
 }
