@@ -1,0 +1,265 @@
+/* CELIA MORUNO HERROJO */
+
+/*<-------------GENERAL------------->*/
+
+body{
+    background-repeat: no-repeat; /*No repetir imagen de fondo*/
+    background-size: cover; /*Imagen cubre todo el fondo*/
+}
+
+header{
+    border: solid black 1px;
+    height: 10vh;
+    width: 98vw;
+    margin: 1vh auto;
+    border-radius: 18px;
+    background-color:#ffffff60;
+}
+
+#logo{
+    height: 9vh;
+    margin: 0.5vh 1vw 0.5vh 2vw ;
+    border-radius: 40px;
+}
+
+nav{
+    text-align: right;
+    width: 85vw;
+    height: 10vh;
+    float: right; /*Flotar a la derecha*/
+}
+
+nav a{
+    text-decoration: none; /*Quitar el subrayado por defecto*/
+    text-align: center;
+    font-size: 2vh;
+    color: #000;
+    padding: 1vh; /*Formar aspecto parecido al buttom*/
+    background-color: #fff;
+    display: block; /*Comportamiento como elemento en bloque*/
+    float: right;
+    width: 18vw;
+    height: 2.5vh;
+    margin: 2.5vh 4vw;
+    border-radius: 10px;
+}
+
+span{
+    font-weight: bolder; /*Negritas*/
+}
+
+/*<----------WEB I -> INDEX.HTML---------->*/
+
+#index{
+    background-image: url("./img/FormatoVertical/FondoVert1.jpeg"); /*Imagen de fondo*/
+}
+
+#introducionInicial{
+    text-align: right;
+    margin: 0 auto;
+    margin-top: 8vh;
+    width: 90vw;
+    border: #000 solid 1px;
+    border-radius: 30px;
+    background-color: #ffffff71;
+}
+
+#introducionInicial > h3{
+    font-size: 4vh;
+    margin: 3.8vh 10vw 0 0;
+}
+
+#introducionInicial > img{
+    width: 15vw;
+    border-radius: 30px;
+    margin: -5vh 2.8vw 3vh 0;
+}
+
+#introducionInicial > p{
+    width: 65vw;
+    font-size: 2.8vh;
+    margin: 6vh 10vh 0 0;
+    float: right;
+    text-align: justify; /*Texto justificado*/
+}
+
+#tablaEstadisticas{
+    border: solid 1px black;
+    border-collapse: collapse; /*Sobreponer bordes de la tabla*/
+    text-align: center;
+    width: 90vw;
+    margin: 0 auto;
+    margin-top: 8vh;
+}
+
+th,td{
+    height: 8vh;
+    border: solid black 1px;
+    font-size: 1.6vw;
+}
+
+th{
+    background-color: #ffffff71;
+    font-size: 1.5vw;
+}
+
+.firstElementRow{
+    font-size: 1.2vw;
+    font-weight: bolder;
+    background-color: #ffffff71;
+    text-decoration: underline; /*Línea subrayado*/
+}
+
+tbody td:nth-child(even) { /*Selección columnas pares*/
+    background-color: #ffffff71;
+}
+
+tbody td:nth-child(odd) { /*Seleccion columnas impares*/
+    background-color: #0e447bb5;
+    color: #fff;
+}
+
+/*<----------WEB II -> CONOCEMAS.HTML---------->*/
+
+#conocemas{
+    background-image: url("./img/FormatoVertical/FondoVert2.jpeg");
+}
+
+article{
+    width: 90vw;
+    margin: 0 auto; /*Centrar*/
+    margin-top: 4vh;
+}  
+
+section{
+    background-color: #ffffff71;
+    border-radius: 25px;
+    border: solid #000 1px;
+    margin-bottom: 4vh;
+}
+
+section > img{
+    border-radius: 15px;
+    width: 20vw;
+    margin: -2vh 2vw 4vh 2vw; /*Encuadrado img*/
+}
+
+/* SECTION IMG IZQUIERDA */
+.sectionImgLeft > h3{
+    text-transform:uppercase; /*Texto en mayúsculas*/
+    font-size: 1.3vw;
+    margin: 3vh 11vw 0 0;
+    text-align: right;
+}
+
+.sectionImgLeft > p{
+    width: 60vw;
+    margin: 3.2vh 4vw 0 0;
+    text-align: justify;
+    float: right;
+    font-size: 1.05vw;
+}
+
+/* SECTION IMG DERECHA */
+.sectionImgRight > img{
+    float: right;
+}
+
+.sectionImgRight > h3{
+    text-transform:uppercase;
+    font-size: 1.3vw;
+    margin: 3vh 0vw 0 5vw;
+}
+
+.sectionImgRight > p{
+    width: 60vw;
+    margin: 3.2vh 0 4vh 3vw;
+    text-align: justify;
+    font-size: 1.05vw;
+}
+
+/*<----------WEB III -> EXPERIENCIA.HTML---------->*/
+
+/* #experiencia{
+    margin: initial;
+    padding: initial;
+} */
+
+#experiencia{
+    background-image: url("./img/FormatoVertical/FondoVert3.jpeg");
+}
+
+form{
+    background-color:#ffffff71;
+    width: 90vw;
+    margin: 4vh auto;
+    border-radius: 15px;
+}
+
+form > div{
+    margin: 2vh 0 5vh 0;
+    border: solid #ffffff00 1px;
+    width: 40vw;
+}
+
+legend{
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-weight: bolder;
+    font-size: 3vh;
+    margin: 0 0 2vh 3vw;
+    padding-top: 1.6vh
+}
+
+label{
+    display: block;
+    font-size: 2.5vh;
+    margin: 4vh 5vw 5vh 5vw;
+    width: 25vw;
+}
+
+#suceso{ 
+    float: right;
+    width: 40vw;
+    margin: -48vh 5vw 0 -40vw;
+}
+
+textarea{
+    width: 40vw;
+    height: 30vh;
+    border-radius: 15px;
+}
+
+#recomendaciones{
+    width: 90vw;
+    margin: 4vh auto;
+    background-color: #ffffff71;
+    border-radius: 15px;
+    padding-bottom: 1vh;
+}
+
+#recomendaciones > h3{
+    text-transform: uppercase;
+    font-size: 3vh;
+    margin: 2vh 0 2vh 0;
+    padding: 1.6vh;
+    text-align: center;
+}
+
+#recomendaciones > ul{
+    font-size: 1.2vw;
+    margin: 0 4vw 4vh 2vw;
+} 
+
+#recomendaciones > ul > li{
+    margin-bottom: 5vh; /*Separar los <li> del primer nivel*/
+}
+
+/*Pseudoclases [Agregado al final para no mover de 
+    número el resto de líneas ya que tengo la documentaciñon 
+    rellena. Lo pondría justo debajo del nav a{...}]*/
+nav a:hover{
+    color: #0e447bb5;
+    font-size: 2.2vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

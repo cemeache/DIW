@@ -1,0 +1,15 @@
+Ampliación:
+    La práctica tenía 2 cajas, una con formulario y texto y otra vacía. El la caja vacía vamos a añadir cajas usando 
+    varios POSITION (que tengan sentido, SE PONE ENUNCIADO)
+
+    4 versiones:
+        Position ABSOLUTE y FIXED
+        Position RELATIVE
+        Position STICKY
+        Intentar usar, al menos 2 posicionamientos, en la misma versión (puede ser usando las 2 cajas: izquierda y derecha)
+
+    ACLARACIONES: 
+        Hay que explicar qué ocurre con el espacio que ocupaban las cajas.  
+        Se puede sustituir parte del contenido de la caja izquierda.
+        Comenta el código.
+        Recuerda que hay que poner enunciado. 
