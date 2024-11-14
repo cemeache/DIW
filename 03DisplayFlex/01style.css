@@ -1,0 +1,102 @@
+/*ELEMENTOS*/
+div{
+    display: flex;
+    border: black 1px solid;
+    margin: 2%;
+}
+
+div a{
+    display: block;
+    padding: 0.5% 1%;
+    width: 300px;
+    text-decoration: none;
+    color: #fff;
+    background-color: rgba(42, 65, 216, 0.872);
+    border-radius: 10px;
+    margin: 1%;
+}
+
+/*ESTILOS #div-one*/
+#div-one a{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0; /*Flex-basis: 0 --> Para que se repartan el espacio disponible*/
+}
+
+/*ESTILOS #div-two*/
+#div-two{
+    width: 400px;
+}
+
+#div-two a{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+}
+
+/*ESTILOS #div-three*/
+#div-three{
+    width: 400px;
+}
+
+#div-three a:nth-child(1){
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+}
+
+#div-three a:nth-child(2){
+    flex-grow: 2;
+    flex-shrink: 2;
+    flex-basis: 0;
+}
+
+#div-three a:nth-child(3){
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+}
+
+#div-three a:nth-child(4){
+    flex-grow: 1;
+    flex-shrink: 2;
+    flex-basis: 0;
+}
+
+/*ESTILOS #div-four*/
+#div-four{
+    width: 400px;
+}
+
+#div-four a:nth-child(1),
+#div-four a:nth-child(3),
+#div-four a:nth-child(4){
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+}
+
+#div-four a:nth-child(2){
+    flex-grow: 2;
+    flex-shrink: 2;
+    flex-basis: 0;
+}
+
+/*ESTILOS #div-five*/
+#div-five{
+    width: 1400px;
+}
+
+#div-five a:nth-child(1),
+#div-five a:nth-child(2),
+#div-five a:nth-child(3){
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+}
+
+#div-five a:nth-child(4){
+    flex-grow: 4;
+    flex-shrink: 1;
+    flex-basis: 0;
+}
