@@ -32,12 +32,20 @@ CREATE TABLE IF NOT EXISTS tutor (
 CREATE TABLE IF NOT EXISTS curso (
     codCurso INT UNSIGNED AUTO_INCREMENT, 
     nombreCurso VARCHAR(120) NOT NULL, -- 1DAW, 2SMR, 1BACH, ...
-    idTutor INT UNSIGNED NOT NULL,
     idEtapa TINYINT UNSIGNED NOT NULL, 
     CONSTRAINT pk_curso PRIMARY KEY (codCurso),
     CONSTRAINT uq_nombreCurso UNIQUE (nombreCurso),
-    CONSTRAINT fk_idTutor FOREIGN KEY (idTutor) REFERENCES tutor(idTutor),
     CONSTRAINT fk_idEtapa FOREIGN KEY (idEtapa) REFERENCES etapa(idEtapa)
+);
+
+CREATE TABLE IF NOT EXISTS clase (
+    idClase INT UNSIGNED AUTO_INCREMENT,
+    nombreClase VARCHAR(100) NOT NULL, -- 1Infantil-A, 1Infantil-B, 1BACH-A, ...
+    codCurso INT UNSIGNED NOT NULL,
+    idTutor INT UNSIGNED NOT NULL,
+    CONSTRAINT pk_clase PRIMARY KEY (idClase),
+    CONSTRAINT fk_codCurso FOREIGN KEY (codCurso) REFERENCES curso(codCurso),
+    CONSTRAINT fk_idTutor FOREIGN KEY (idTutor) REFERENCES tutor(idTutor)
 );
 
 CREATE TABLE IF NOT EXISTS reserva (
@@ -48,9 +56,9 @@ CREATE TABLE IF NOT EXISTS reserva (
     nombre VARCHAR(30) NOT NULL,
     apellidos VARCHAR(100) NOT NULL,
     correo VARCHAR(255) NOT NULL, -- Pueden realizar varias reservas con el mismo correo
-    codCurso INT UNSIGNED NOT NULL,
+    idClase INT UNSIGNED NOT NULL,
     CONSTRAINT pk_reserva PRIMARY KEY (idReserva),
-    CONSTRAINT fk_resCurso FOREIGN KEY (codCurso) REFERENCES curso(codCurso)
+    CONSTRAINT fk_resClase FOREIGN KEY (idClase) REFERENCES clase (idClase)
 );
 
 INSERT INTO reserva (fechaReserva, metodoPago, estadoPago, nombre, apellidos, correo, codCurso) VALUES ();
