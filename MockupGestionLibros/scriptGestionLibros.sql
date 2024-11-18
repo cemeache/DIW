@@ -53,6 +53,8 @@ CREATE TABLE IF NOT EXISTS reserva (
     CONSTRAINT fk_resCurso FOREIGN KEY (codCurso) REFERENCES curso(codCurso)
 );
 
+INSERT INTO reserva (fechaReserva, metodoPago, estadoPago, nombre, apellidos, correo, codCurso) VALUES ();
+
 CREATE TABLE IF NOT EXISTS editorial (
     idEditorial TINYINT UNSIGNED AUTO_INCREMENT,
     nombreEditorial VARCHAR(100) NOT NULL,
@@ -87,3 +89,23 @@ CREATE TABLE IF NOT EXISTS reserva_libro (
     CONSTRAINT fk_reslib_idReserva FOREIGN KEY (idReserva) REFERENCES reserva(idReserva),
     CONSTRAINT fk_reslib_isbn FOREIGN KEY (isbn) REFERENCES libro(isbn)
 );
+
+-- 4. Relleno de tablas
+
+INSERT INTO etapa (nombreEtapa) VALUES ("Ciclos"); 
+INSERT INTO etapa (nombreEtapa) VALUES ("Bachillerato"); 
+INSERT INTO etapa (nombreEtapa) VALUES ("Infantil"); 
+
+INSERT INTO tutor (nombreTutor, correoTutor) VALUES ("Ernesto","ernesto@gmail.com");
+INSERT INTO tutor (nombreTutor, correoTutor) VALUES ("Isa","isa@gmail.com");
+INSERT INTO tutor (nombreTutor, correoTutor) VALUES ("Paco","paco@gmail.com");
+INSERT INTO tutor (nombreTutor, correoTutor) VALUES ("Alberto","alberto@gmail.com");
+
+INSERT INTO curso (nombreCurso, idTutor, idEtapa) VALUES ("1DAW", 2, 1);
+INSERT INTO curso (nombreCurso, idTutor, idEtapa) VALUES ("1BACH", 3, 2);
+INSERT INTO curso (nombreCurso, idTutor, idEtapa) VALUES ("1INFANTIL", 1, 3);
+
+INSERT INTO reserva (fechaReserva, metodoPago, estadoPago, nombre, apellidos, correo, codCurso) VALUES ();
+
+INSERT INTO editorial (nombreEditorial) VALUES ("ANAYA");
+INSERT INTO editorial (nombreEditorial) VALUES ("Santillana");
