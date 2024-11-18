@@ -10,6 +10,7 @@ CREATE TABLE IF NOT EXISTS administrativo (
     idAdmin INT UNSIGNED AUTO_INCREMENT,
     usuario VARCHAR(30) NOT NULL,
     contrasenia VARCHAR(255) NOT NULL,
+    correoAdmin VARCHAR(255) NOT NULL,
     CONSTRAINT pk_administrativo PRIMARY KEY (idAdmin),
     CONSTRAINT uq_usuario UNIQUE (usuario)
 );
