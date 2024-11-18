@@ -53,7 +53,7 @@ CREATE TABLE IF NOT EXISTS reserva (
     idReserva INT UNSIGNED AUTO_INCREMENT,
     fechaReserva DATETIME NOT NULL,
     metodoPago CHAR(15) NOT NULL, -- Transferencia, Efectivo, TPV
-    estadoPago BIT NOT NULL, -- 0 -> No pagado, 1 -> Pagado
+    estadoPago BIT DEFAULT 0, -- 0 -> No pagado, 1 -> Pagado
     nombre VARCHAR(30) NOT NULL,
     apellidos VARCHAR(100) NOT NULL,
     correo VARCHAR(255) NOT NULL, -- Pueden realizar varias reservas con el mismo correo
