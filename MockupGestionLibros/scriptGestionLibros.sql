@@ -10,6 +10,7 @@ CREATE TABLE IF NOT EXISTS administrativo (
     idAdmin INT UNSIGNED AUTO_INCREMENT,
     usuario VARCHAR(30) NOT NULL,
     contrasenia VARCHAR(255) NOT NULL,
+    correoAdmin VARCHAR(255) NOT NULL,
     CONSTRAINT pk_administrativo PRIMARY KEY (idAdmin),
     CONSTRAINT uq_usuario UNIQUE (usuario)
 );
@@ -30,30 +31,39 @@ CREATE TABLE IF NOT EXISTS tutor (
 );
 
 CREATE TABLE IF NOT EXISTS curso (
-    codCurso INT UNSIGNED AUTO_INCREMENT, 
-    nombreCurso VARCHAR(120) NOT NULL, -- 1DAW, 2SMR, 1BACH, ...
-    idTutor INT UNSIGNED NOT NULL,
+    codCurso CHAR(10) NOT NULL, -- 1DAW, 2SMR, 1BACH, ...
+    nombreCurso VARCHAR(120) NOT NULL, -- 1º Desarrollo de Aplicaciones Web
     idEtapa TINYINT UNSIGNED NOT NULL, 
     CONSTRAINT pk_curso PRIMARY KEY (codCurso),
     CONSTRAINT uq_nombreCurso UNIQUE (nombreCurso),
-    CONSTRAINT fk_idTutor FOREIGN KEY (idTutor) REFERENCES tutor(idTutor),
     CONSTRAINT fk_idEtapa FOREIGN KEY (idEtapa) REFERENCES etapa(idEtapa)
+);
+
+CREATE TABLE IF NOT EXISTS clase (
+    codCurso CHAR(10) NOT NULL, -- 1DAW, 2SMR, 1BACH, ...
+    idClase CHAR(1) NOT NULL, -- A,B,C ...
+    nombreClase VARCHAR(100) NOT NULL, -- 1º Infantil-A, 1º Infantil-B, 1º Bachillerato-A, ...
+    idTutor INT UNSIGNED NOT NULL,
+    CONSTRAINT pk_clase PRIMARY KEY (codCurso, idClase),
+    CONSTRAINT fk_codCurso FOREIGN KEY (codCurso) REFERENCES curso(codCurso),
+    CONSTRAINT fk_idTutor FOREIGN KEY (idTutor) REFERENCES tutor(idTutor)
 );
 
 CREATE TABLE IF NOT EXISTS reserva (
     idReserva INT UNSIGNED AUTO_INCREMENT,
     fechaReserva DATETIME NOT NULL,
     metodoPago CHAR(15) NOT NULL, -- Transferencia, Efectivo, TPV
-    estadoPago BIT NOT NULL, -- 0 -> No pagado, 1 -> Pagado
+    estadoPago BIT DEFAULT 0, -- 0 -> No pagado, 1 -> Pagado
     nombre VARCHAR(30) NOT NULL,
     apellidos VARCHAR(100) NOT NULL,
     correo VARCHAR(255) NOT NULL, -- Pueden realizar varias reservas con el mismo correo
-    codCurso INT UNSIGNED NOT NULL,
+    codCurso CHAR(10) NOT NULL, -- 1DAW, 2SMR, 1BACH, ...
+    idClase CHAR(1) NOT NULL, -- A,B,C ...
     CONSTRAINT pk_reserva PRIMARY KEY (idReserva),
-    CONSTRAINT fk_resCurso FOREIGN KEY (codCurso) REFERENCES curso(codCurso)
+    CONSTRAINT fk_resClase FOREIGN KEY (codCurso, idClase) REFERENCES clase (codCurso, idClase)
 );
 
-INSERT INTO reserva (fechaReserva, metodoPago, estadoPago, nombre, apellidos, correo, codCurso) VALUES ();
+--INSERT INTO reserva (fechaReserva, metodoPago, estadoPago, nombre, apellidos, correo, codCurso) VALUES ();
 
 CREATE TABLE IF NOT EXISTS editorial (
     idEditorial TINYINT UNSIGNED AUTO_INCREMENT,
@@ -69,15 +79,15 @@ CREATE TABLE IF NOT EXISTS libro (
     precio DECIMAL(5,2) NOT NULL,
     idEditorial TINYINT UNSIGNED NOT NULL,
     CONSTRAINT pk_libro PRIMARY KEY (isbn),
-    CONSTRAINT fk_idEditorial FOREIGN KEY (idEditorial) REFERENCES editorial(idEditorial)
+    CONSTRAINT fk_idEditorial FOREIGN KEY (idEditorial) REFERENCES editorial(idEditorial) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS curso_libro (
-    codCurso INT UNSIGNED NOT NULL,
+    codCurso CHAR(10) NOT NULL,
     isbn CHAR(13) NOT NULL,
     CONSTRAINT pk_cursoLibro PRIMARY KEY (codCurso, isbn),
-    CONSTRAINT fk_codCurso FOREIGN KEY (codCurso) REFERENCES curso(codCurso),
-    CONSTRAINT fk_isbn FOREIGN KEY (isbn) REFERENCES libro(isbn)
+    CONSTRAINT fk_CLcodCurso FOREIGN KEY (codCurso) REFERENCES curso(codCurso) ON UPDATE CASCADE ON DELETE CASCADE, 
+    CONSTRAINT fk_CLisbn FOREIGN KEY (isbn) REFERENCES libro(isbn) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS reserva_libro (
@@ -89,23 +99,3 @@ CREATE TABLE IF NOT EXISTS reserva_libro (
     CONSTRAINT fk_reslib_idReserva FOREIGN KEY (idReserva) REFERENCES reserva(idReserva),
     CONSTRAINT fk_reslib_isbn FOREIGN KEY (isbn) REFERENCES libro(isbn)
 );
-
--- 4. Relleno de tablas
-
-INSERT INTO etapa (nombreEtapa) VALUES ("Ciclos"); 
-INSERT INTO etapa (nombreEtapa) VALUES ("Bachillerato"); 
-INSERT INTO etapa (nombreEtapa) VALUES ("Infantil"); 
-
-INSERT INTO tutor (nombreTutor, correoTutor) VALUES ("Ernesto","ernesto@gmail.com");
-INSERT INTO tutor (nombreTutor, correoTutor) VALUES ("Isa","isa@gmail.com");
-INSERT INTO tutor (nombreTutor, correoTutor) VALUES ("Paco","paco@gmail.com");
-INSERT INTO tutor (nombreTutor, correoTutor) VALUES ("Alberto","alberto@gmail.com");
-
-INSERT INTO curso (nombreCurso, idTutor, idEtapa) VALUES ("1DAW", 2, 1);
-INSERT INTO curso (nombreCurso, idTutor, idEtapa) VALUES ("1BACH", 3, 2);
-INSERT INTO curso (nombreCurso, idTutor, idEtapa) VALUES ("1INFANTIL", 1, 3);
-
-INSERT INTO reserva (fechaReserva, metodoPago, estadoPago, nombre, apellidos, correo, codCurso) VALUES ();
-
-INSERT INTO editorial (nombreEditorial) VALUES ("ANAYA");
-INSERT INTO editorial (nombreEditorial) VALUES ("Santillana");
