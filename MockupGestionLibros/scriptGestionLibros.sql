@@ -63,6 +63,8 @@ CREATE TABLE IF NOT EXISTS reserva (
     CONSTRAINT fk_resClase FOREIGN KEY (codCurso, idClase) REFERENCES clase (codCurso, idClase)
 );
 
+--INSERT INTO reserva (fechaReserva, metodoPago, estadoPago, nombre, apellidos, correo, codCurso) VALUES ();
+
 CREATE TABLE IF NOT EXISTS editorial (
     idEditorial TINYINT UNSIGNED AUTO_INCREMENT,
     nombreEditorial VARCHAR(100) NOT NULL,
