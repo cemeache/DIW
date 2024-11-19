@@ -31,13 +31,22 @@ CREATE TABLE IF NOT EXISTS tutor (
 );
 
 CREATE TABLE IF NOT EXISTS curso (
-    codCurso INT UNSIGNED AUTO_INCREMENT, 
-    nombreCurso VARCHAR(120) NOT NULL, -- 1DAW, 2SMR, 1BACH, ...
-    idTutor INT UNSIGNED NOT NULL,
+    codCurso CHAR(10) NOT NULL, -- 1DAW, 2SMR, 1BACH, ...
+    nombreCurso VARCHAR(120) NOT NULL, -- 1º Desarrollo de Aplicaciones Web
     idEtapa TINYINT UNSIGNED NOT NULL, 
     CONSTRAINT pk_curso PRIMARY KEY (codCurso),
     CONSTRAINT uq_nombreCurso UNIQUE (nombreCurso),
     CONSTRAINT fk_idEtapa FOREIGN KEY (idEtapa) REFERENCES etapa(idEtapa)
+);
+
+CREATE TABLE IF NOT EXISTS clase (
+    codCurso CHAR(10) NOT NULL, -- 1DAW, 2SMR, 1BACH, ...
+    idClase CHAR(1) NOT NULL, -- A,B,C ...
+    nombreClase VARCHAR(100) NOT NULL, -- 1º Infantil-A, 1º Infantil-B, 1º Bachillerato-A, ...
+    idTutor INT UNSIGNED NOT NULL,
+    CONSTRAINT pk_clase PRIMARY KEY (codCurso, idClase),
+    CONSTRAINT fk_codCurso FOREIGN KEY (codCurso) REFERENCES curso(codCurso),
+    CONSTRAINT fk_idTutor FOREIGN KEY (idTutor) REFERENCES tutor(idTutor)
 );
 
 CREATE TABLE IF NOT EXISTS reserva (
@@ -48,9 +57,10 @@ CREATE TABLE IF NOT EXISTS reserva (
     nombre VARCHAR(30) NOT NULL,
     apellidos VARCHAR(100) NOT NULL,
     correo VARCHAR(255) NOT NULL, -- Pueden realizar varias reservas con el mismo correo
-    codCurso INT UNSIGNED NOT NULL,
+    codCurso CHAR(10) NOT NULL, -- 1DAW, 2SMR, 1BACH, ...
+    idClase CHAR(1) NOT NULL, -- A,B,C ...
     CONSTRAINT pk_reserva PRIMARY KEY (idReserva),
-    CONSTRAINT fk_resCurso FOREIGN KEY (codCurso) REFERENCES curso(codCurso)
+    CONSTRAINT fk_resClase FOREIGN KEY (codCurso, idClase) REFERENCES clase (codCurso, idClase)
 );
 
 --INSERT INTO reserva (fechaReserva, metodoPago, estadoPago, nombre, apellidos, correo, codCurso) VALUES ();
@@ -89,23 +99,3 @@ CREATE TABLE IF NOT EXISTS reserva_libro (
     CONSTRAINT fk_reslib_idReserva FOREIGN KEY (idReserva) REFERENCES reserva(idReserva),
     CONSTRAINT fk_reslib_isbn FOREIGN KEY (isbn) REFERENCES libro(isbn)
 );
-
--- 4. Relleno de tablas
-
-INSERT INTO etapa (nombreEtapa) VALUES ("Ciclos"); 
-INSERT INTO etapa (nombreEtapa) VALUES ("Bachillerato"); 
-INSERT INTO etapa (nombreEtapa) VALUES ("Infantil"); 
-
-INSERT INTO tutor (nombreTutor, correoTutor) VALUES ("Ernesto","ernesto@gmail.com");
-INSERT INTO tutor (nombreTutor, correoTutor) VALUES ("Isa","isa@gmail.com");
-INSERT INTO tutor (nombreTutor, correoTutor) VALUES ("Paco","paco@gmail.com");
-INSERT INTO tutor (nombreTutor, correoTutor) VALUES ("Alberto","alberto@gmail.com");
-
-INSERT INTO curso (nombreCurso, idTutor, idEtapa) VALUES ("1DAW", 2, 1);
-INSERT INTO curso (nombreCurso, idTutor, idEtapa) VALUES ("1BACH", 3, 2);
-INSERT INTO curso (nombreCurso, idTutor, idEtapa) VALUES ("1INFANTIL", 1, 3);
-
-INSERT INTO reserva (fechaReserva, metodoPago, estadoPago, nombre, apellidos, correo, codCurso) VALUES ();
-
-INSERT INTO editorial (nombreEditorial) VALUES ("ANAYA");
-INSERT INTO editorial (nombreEditorial) VALUES ("Santillana");
