@@ -67,10 +67,10 @@
             //NO FUNCIONA YA QUE HAY QUE CONFIGURAR EL SERVICIO DE CORREO
             $asunto = "Reserva de libros";
             $mensaje = "Su libro con ISBN: ".$isbn." está listo para su recogida";
-            enviarCorreo($correoResrv, $asunto, $mensaje);
+            //enviarCorreo($correoResrv, $asunto, $mensaje);
 
             $mensaje = "El alumno x debe pasarse a recoger el libro con isbn: ".$isbn;
-            enviarCorreo($correoTutor, $asunto, $mensaje);
+            //enviarCorreo($correoTutor, $asunto, $mensaje);
             
         }   
     }
