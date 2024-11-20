@@ -2,10 +2,12 @@
     //Incluimos el fichero de configuración
     require_once("./conexion.php");
 
+
+    $isbn = '9781234567890';
     //Consulta SQL
     $consulta = "SELECT reserva.idReserva, nombre, apellidos, correo, codCurso, idClase, fechaReserva FROM reserva 
                     INNER JOIN reserva_libro ON reserva.idReserva = reserva_libro.idReserva AND reserva.estadoPago = 1 AND reserva_libro.asignado = 0
-                    INNER JOIN libro ON libro.isbn = reserva_libro.isbn AND libro.isbn = '9781122334455'
+                    INNER JOIN libro ON libro.isbn = reserva_libro.isbn AND libro.isbn = '".$isbn."'
                     ORDER BY reserva.fechaReserva ASC;";
 
     //Ejecutar Consulta
