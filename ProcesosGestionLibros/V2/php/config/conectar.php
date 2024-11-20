@@ -2,9 +2,12 @@
     require_once("./configdb.php");
 
     /*Conectarnos al servidor de bases de datos*/
-    try {
-        $pdo = new PDO('mysql:host=' . $servidor . ';dbname=' . $basedatos, $usuario, $contraseña);
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    } catch (PDOException $e) 
-        echo "Error al conectar a la base de datos: " . $e->getMessage();
+    class Conectar{
+        public $pdo;
+
+        public function __construct($servidor,$database,$usuario,$contrasenia) {
+            $this->pdo = new PDO('mysql:host=' . $servidor . ';dbname=' . $basedatos, $usuario, $contrasenia);
+            //$this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        }
+    }
 ?>

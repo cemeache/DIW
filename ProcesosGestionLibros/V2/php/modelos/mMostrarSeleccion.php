@@ -1,10 +1,12 @@
 <?php
+    require_once('../config/conectar.php');
+
     class mMostrarSeleccion{
         private $conexion;
 
-        public function __construct(Type $var = null) {
-            $this->conexion = new PDO('mysql:host=localhost;dbname=mi_base_datos', 'mi_usuario', 'mi_contraseña');
- }
+        public function __construct() {
+            $this->conexion = require_once('');
+        }
 
         public function selectCampos($isbn){
             //Consulta SQL

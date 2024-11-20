@@ -1,6 +1,6 @@
 <?php
     $servidor = "localhost";
     $usuario = "root";
-    $contraseña = "";
+    $contrasenia = "";
     $basedatos = "bdgestionlibros";
 ?>
