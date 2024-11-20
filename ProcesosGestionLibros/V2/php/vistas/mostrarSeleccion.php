@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gst Stock | Listar</title>
 
-    <link rel="stylesheet" href="../css/merged.css" type="text/css">
+    <link rel="stylesheet" href="../../css/merged.css" type="text/css">
 </head>
 <body>
     <header>
         <div>
-            <img src="../img/logotipo.png" alt="Logo de la escuela">
+            <img src="../../img/logotipo.png" alt="Logo de la escuela">
         </div>
         <nav>
             <a href="">HOME</a>
@@ -27,9 +27,13 @@
         <hr>
         <form action="./asignarStock.php" method="POST" id="asigStock">
             <?php
-                for ($i=0; $i < count($nombre); $i++) { 
-                    echo "<input type='checkbox' name='seleccionados[]' value='".$idReserva[$i]."'>";
-                    echo "<label>".$nombre[$i].' '.$apellidos[$i].' - '.$correo[$i].' - '.$codCurso[$i].' '.$idClase[$i]."</label><br>";
+                require_once('../controladores/cMostrarSeleccion.php');
+                $objCmostrSelec = new CMostrarSeleccion('9781234567890');
+                $datosVld = $objCmostrSelec -> validarResultSelect();
+
+                for ($i=0; $i < count($datosVld); $i++) { 
+                    echo "<input type='checkbox' name='seleccionados[]' value='".$datosVld[$i]["idReserva"]."'>";
+                    echo "<label>".$datosVld[$i]['nombre'].' '.$datosVld[$i]['apellidos'].' - '.$datosVld[$i]["correo"].' - '.$datosVld[$i]['codCurso'].' '.$datosVld[$i]['idClase']."</label><br>";
                 }
             ?>
             <input type="submit" value="Asignar">
