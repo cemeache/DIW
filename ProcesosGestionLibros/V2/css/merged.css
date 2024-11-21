@@ -579,6 +579,10 @@ footer div:nth-child(3) a{
         font-size: 1.3em;
     }
 
+    #asigStock input{
+        margin-left: 17%;
+    }
+
     /*Article | Ajustes Class*/
     .bbdd{
         width: 50%;
