@@ -27,9 +27,21 @@
         <hr>
         <?php
             require_once('../controladores/cUpdateStockAsig.php');
-            $objCUpdate = new CUpdateStockAsig($_POST["seleccionados"], $_GET["isbn"]);
 
+            // Comprobar si ha rellenado algo y si no, enviar array vacío [Preguntar Isa]
+            $seleccionados = isset($_POST["seleccionados"]) ? $_POST["seleccionados"] : [];
+            // Instancia Controlador
+            $objCUpdate = new CUpdateStockAsig($seleccionados, $_GET["isbn"]);
 
+            $datosVld = $objCUpdate->validarTransactionUpdates();
+
+            if(is_array($datosVld))
+                foreach ($datosVld as $i => $asig)
+                    echo "<p>Reserva ID: ".$i." - ".($asig ? "Asignado" : "No Asignado")."</p>";
+            else    
+                echo "<p class='msjError'>".$datosVld."</p>";
+                
+            
         ?>
         <a href="../../html/index.html">Volver</a>
     </main>

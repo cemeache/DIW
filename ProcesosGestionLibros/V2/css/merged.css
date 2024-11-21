@@ -250,10 +250,6 @@ form input[type="submit"]:hover{
     margin-left: 25%;
 }
 
-#asigStock p{
-    text-align: center;
-}
-
 #asigStock a{
     display: block;
     padding: 1%;
@@ -417,6 +413,10 @@ footer div:nth-child(3) a{
 .lineaFooter{
     margin-right: 3.2%;
     border-right: 0.1vw solid #417b9876;
+}
+
+.msjError{
+    text-align: center;
 }
 
 /* Media Queries */
@@ -592,6 +592,11 @@ footer div:nth-child(3) a{
     
     .bbdd p{
         font-size: 2em;
+    }
+
+    /* Ajuste Clases */
+    .msjError{
+        font-size: 1.5em;
     }
 
     /* Footer | Ajustes Elementos */

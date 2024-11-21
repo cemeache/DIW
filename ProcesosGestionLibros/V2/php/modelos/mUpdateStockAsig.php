@@ -12,19 +12,13 @@
             $this->isbn = $isbn;
 
             // Obtener Stock Actual
-            $this->stock = $this->selectStockAct();
-        }
-
-        private function selectStockAct(){
-            $consulta = "SELECT stock FROM libro WHERE isbn = :isbn";
-            $cnsltPrep = $this->pdo->prepare($consulta);
-            $cnsltPrep->bindParam(':isbn', $this->isbn);
-            $cnsltPrep ->execute();
-            return $cnsltPrep ->fetchAll(PDO::FETCH_ASSOC);
+            $resultStock = $this->selectStockAct();
+            $this->stock = $resultStock[0]["stock"]; // Corrección: acceder al primer elemento del array
         }
 
         public function transactionUpdates($seleccion){
             // Transactions | Actualización libro_reserva.asignado + libro.stock
+            $estdUpd = [];
             for ($i=0; $i < count($seleccion) && $this->stock > 0; $i++) { 
                 $this->pdo->beginTransaction(); 
 
@@ -39,7 +33,7 @@
                 $cnsltPrepStock = $this->pdo->prepare($updStock);
                 $cnsltPrepStock->bindParam(':isbn', $this->isbn);
                 
-                if ($cnsltPrepLibRes->execute() === true && $cnsltPrepStock->execute() === true) {
+                if ($cnsltPrepLibRes->execute() && $cnsltPrepStock->execute()) {
                     $this->pdo->commit();
                     $this->stock--;
                     $estdUpd[$seleccion[$i]] = true;
@@ -49,6 +43,14 @@
                 }
             }
             return $estdUpd;
+        }
+
+        private function selectStockAct(){
+            $consulta = "SELECT stock FROM libro WHERE isbn = :isbn";
+            $cnsltPrep = $this->pdo->prepare($consulta);
+            $cnsltPrep->bindParam(':isbn', $this->isbn);
+            $cnsltPrep ->execute();
+            return $cnsltPrep ->fetchAll(PDO::FETCH_ASSOC);
         }
 
     }

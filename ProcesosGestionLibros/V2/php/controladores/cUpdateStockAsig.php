@@ -11,18 +11,19 @@
         }
 
         public function validarTransactionUpdates(){
-            if (!$this->validarSeleccion())
-                return "Las seleccion se dejó vacia";
+            if (!$this->validarSeleccionIsbn())
+                return "Las selección se dejó vacia";
 
-            $objModelo = new MUpdateStockAsig();
+            $objModelo = new MUpdateStockAsig($this->isbn);
 
-            $objModelo->transactionUpdates();  
+            $datos = $objModelo->transactionUpdates($this->seleccion);  
 
+            return $datos;
         }
 
         private function validarSeleccionIsbn(){
             // [condicion ? valor_true : valor_false]
-            return !empty($this->seleccion) && !empty($this->isbn) ? true : false
+            return !empty($this->seleccion) && !empty($this->isbn) ? true : false;
         }
 
 

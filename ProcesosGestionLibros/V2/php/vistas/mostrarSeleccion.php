@@ -26,7 +26,7 @@
         <h1>LISTADO DE RESERVAS A ASIGNAR</h1>
         <hr>
         <?php
-            echo '<form action="./updateStockAsig.php?isbn='.$_GET["isbn"].'" method="POST" id="asigStock">'
+            echo '<form action="./updateStockAsig.php?isbn='.$_GET["isbn"].'" method="POST" id="asigStock">';
             
                 require_once('../controladores/cMostrarSeleccion.php');
 
@@ -43,7 +43,7 @@
                         echo "<label>".$datosVld[$i]['nombre'].' '.$datosVld[$i]['apellidos'].' - '.$datosVld[$i]["correo"].' - '.$datosVld[$i]['codCurso'].' '.$datosVld[$i]['idClase'].' - '.$datosVld[$i]['fechaReserva']."</label><br>";
                     }
                 } else
-                    echo "<p>No existe ninguna reserva lista para asignar.</p>";
+                    echo "<p class='msjError'>No existe ninguna reserva lista para asignar.</p>";
         ?>
             <input type="submit" value="Asignar">
             <a href="../../html/index.html">Volver</a>
