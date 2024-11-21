@@ -17,8 +17,13 @@
         }
 
         public function transactionUpdates($seleccion){
+            // Inicializo Array a Retornar ->  Controlar No Asignados
+            // Funcion Relleno Array | [$posIni, $numElmtArray, $valor]
+            //$estdUpd = array_fill(0, count($seleccion)-1, false);
+            // Funcion Relleno Array con Índices = $arrayDefn | [$arrayIndices,$valor]
+            $estdUpd = array_fill_keys($seleccion, false);
+
             // Transactions | Actualización libro_reserva.asignado + libro.stock
-            $estdUpd = [];
             for ($i=0; $i < count($seleccion) && $this->stock > 0; $i++) { 
                 $this->pdo->beginTransaction(); 
 
@@ -39,7 +44,6 @@
                     $estdUpd[$seleccion[$i]] = true;
                 } else{ 
                     $this->pdo->rollBack();
-                    $estdUpd[$seleccion[$i]] = false;
                 }
             }
             return $estdUpd;

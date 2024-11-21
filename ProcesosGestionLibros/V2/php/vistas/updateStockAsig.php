@@ -38,10 +38,9 @@
             if(is_array($datosVld))
                 foreach ($datosVld as $i => $asig)
                     echo "<p>Reserva ID: ".$i." - ".($asig ? "Asignado" : "No Asignado")."</p>";
-            else    
+            else 
                 echo "<p class='msjError'>".$datosVld."</p>";
-                
-            
+
         ?>
         <a href="../../html/index.html">Volver</a>
     </main>

@@ -18,7 +18,7 @@
 
             $datos = $objModelo->transactionUpdates($this->seleccion);  
 
-            return $datos;
+            return !empty($datos) ? $datos : "No hay Stock";
         }
 
         private function validarSeleccionIsbn(){
