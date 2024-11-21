@@ -23,31 +23,15 @@
         </nav>
     </header>
     <main>
-        <h1>LISTADO DE RESERVAS A ASIGNAR</h1>
+        <h1>ASIGNACIÓN REALIZADA</h1>
         <hr>
         <?php
-            echo '<form action="./updateStockAsig.php?isbn='.$_GET["isbn"].'" method="POST" id="asigStock">'
-            
-                require_once('../controladores/cMostrarSeleccion.php');
+            require_once('../controladores/cUpdateStockAsig.php');
+            $objCUpdate = new CUpdateStockAsig($_POST["seleccionados"], $_GET["isbn"]);
 
-                //Instanciar Controlador
-                $objControlador = new CMostrarSeleccion($_GET["isbn"]);
 
-                // Obtener Resultados Validados
-                $datosVld = $objControlador->validarResultSelect();
-
-                // Mostrar Resultados
-                if (count($datosVld) > 0) {
-                    for ($i = 0; $i < count($datosVld); $i++) {
-                        echo "<input type='checkbox' name='seleccionados[]' value='".$datosVld[$i]["idReserva"]."'>";
-                        echo "<label>".$datosVld[$i]['nombre'].' '.$datosVld[$i]['apellidos'].' - '.$datosVld[$i]["correo"].' - '.$datosVld[$i]['codCurso'].' '.$datosVld[$i]['idClase'].' - '.$datosVld[$i]['fechaReserva']."</label><br>";
-                    }
-                } else
-                    echo "<p>No existe ninguna reserva lista para asignar.</p>";
         ?>
-            <input type="submit" value="Asignar">
-            <a href="../../html/index.html">Volver</a>
-        </form>
+        <a href="../../html/index.html">Volver</a>
     </main>
     <footer>
         <div class="lineaFooter">

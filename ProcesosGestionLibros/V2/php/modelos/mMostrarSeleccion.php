@@ -4,7 +4,7 @@
     class MmostrarSeleccion extends Conectar{
 
         public function __construct() {
-            //Llama al constructor padre [conectar]
+            // Llamar Constructor Padre [Conectar]
             parent::__construct();
         }
 
