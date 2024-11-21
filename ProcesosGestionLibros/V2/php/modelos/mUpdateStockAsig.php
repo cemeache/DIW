@@ -18,9 +18,12 @@
 
         public function transactionUpdates($seleccion){
             // Inicializo Array a Retornar ->  Controlar No Asignados
-            // Funcion Relleno Array | [$posIni, $numElmtArray, $valor]
-            //$estdUpd = array_fill(0, count($seleccion)-1, false);
-            // Funcion Relleno Array con Índices = $arrayDefn | [$arrayIndices,$valor]
+
+            /* Funcion Relleno Array | [$posIni, $numElmtArray, $valor] 
+                    No me sirve ya que no asigno los idReserva a los No Asignados
+            $estdUpd = array_fill(0, count($seleccion)-1, false);*/
+
+            // Funcion Relleno Array Mismos Índices $arrayEspcf | [$arrayIndices,$valor]
             $estdUpd = array_fill_keys($seleccion, false);
 
             // Transactions | Actualización libro_reserva.asignado + libro.stock
