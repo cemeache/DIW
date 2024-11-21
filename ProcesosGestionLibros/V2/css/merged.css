@@ -118,7 +118,8 @@ main > h1{
     text-align: center;
 }
 
-main > a{
+main > a,
+main #stock article > a{
     display: block;
     width: 10%;
     text-align: center;
@@ -128,6 +129,13 @@ main > a{
     padding: 1% 2%;
     border-radius: 10px;
     margin: 2% auto;
+}
+
+/* Stock | Ajustes Botones Eject Procesos [Añadido Exclusivo]*/
+#stock article > a{
+    display: inline-block !important;
+    margin-top: unset !important;
+    margin-left: 3% !important;
 }
 
 main a:hover{
@@ -298,10 +306,10 @@ article{
 
 /* Article | Elementos */
 
-/*Estilo para los datos extraidos de la bbdd */
+/*Estilo para los datos extraidos de la bbdd [Listar Stock]*/
 .bbdd{
     width: 33%;
-    margin: 5% 3% 5% 5%;
+    margin: 5.5% 3% 5% 3%;
     float: left;
     position: absolute;
     top: 10%;
@@ -362,6 +370,18 @@ article .botones figcaption{
     position: absolute;
     top: 15%;
     right: 10.5%;
+}
+
+#stock #infoStock {
+    top: 36%;
+    right: 44%;
+    font-size: 2.5em;
+}
+
+#stock #titleStock{
+    top: 50.8%;
+    right: 43.6%;
+    font-size: 1em;
 }
 
 #stock article .botones{
@@ -592,6 +612,32 @@ footer div:nth-child(3) a{
     
     .bbdd p{
         font-size: 2em;
+    }
+
+    /* AsignStock | Ajustes Botones Procesos [Agregado Exclusivo]*/
+    #stock #infoStock{
+        top: 78%;
+        right: unset;
+        left: 17%;
+        font-size: 5em;
+    }
+
+    #stock #titleStock{
+        top: 92%;
+        right: unset;
+        left: 16.8%;
+        font-size: 1.8em;
+    }
+
+    #stock article > a{
+        width: 16% !important; 
+        position: absolute;
+        left: 40%;
+        top:40.5%;
+    }
+
+    #stock article > a:nth-of-type(2){
+        left: 64%;
     }
 
     /* Ajuste Clases */
