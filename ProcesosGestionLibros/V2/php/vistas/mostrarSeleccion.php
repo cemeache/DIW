@@ -46,7 +46,7 @@
                     echo "<p class='msjError'>No existe ninguna reserva lista para asignar.</p>";
         ?>
             <input type="submit" value="Asignar">
-            <a href="../../html/index.html">Volver</a>
+            <a href="../../../Stock/listar.php">Volver</a>
         </form>
     </main>
     <footer>

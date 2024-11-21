@@ -42,7 +42,7 @@
                 echo "<p class='msjError'>".$datosVld."</p>";
 
         ?>
-        <a href="../../html/index.html">Volver</a>
+        <a href="../../../Stock/listar.php">Volver</a>
     </main>
     <footer>
         <div class="lineaFooter">
