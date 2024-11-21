@@ -239,6 +239,48 @@ form input[type="submit"]:hover{
     width: 29%;
 }
 
+/*Form | Ajuste -> Asignar Stock*/
+
+#asigStock label{
+    display: inline-block;
+    margin: 1% 0 2% 2%;
+}
+
+#asigStock input{
+    margin-left: 25%;
+}
+
+#asigStock a{
+    display: block;
+    padding: 1%;
+    border-radius: 10px;
+    color: #fff;
+    margin-bottom: 3%;
+    background-color: #599ABA;
+    text-decoration: none;
+}
+
+#asigStock input[type="submit"],
+#asigStock a{
+    width: 45%;
+    margin-top: 4%;
+    margin-left: 27.5%;
+    margin-bottom: unset;
+}
+
+#asigStock a{
+    width: 43%;
+    text-align: center;
+    border: #000 2px solid;
+    margin-top: 0.5%;
+    margin-bottom: 5%;
+}
+
+#asigStock a:hover{
+    background-color: #006293;
+    cursor: pointer;
+}
+
 /*---LISTAR---*/
 hr{
     width: 90%;
@@ -304,7 +346,7 @@ article .botones figcaption{
     font-size: 1vw;
 }
 
-/* Aticle | Ajustes -> Gestión Stock */
+/* Article | Ajustes -> Gestión Stock */
 #stock .bbdd{
     width: 32%;
     top: 1%;
@@ -371,6 +413,10 @@ footer div:nth-child(3) a{
 .lineaFooter{
     margin-right: 3.2%;
     border-right: 0.1vw solid #417b9876;
+}
+
+.msjError{
+    text-align: center;
 }
 
 /* Media Queries */
@@ -442,7 +488,7 @@ footer div:nth-child(3) a{
         margin-left: 17.5%;
     }
 
-    /*Article | Ajustes Botones -> Gestion Stock [Listar]*/
+    /* Article | Ajustes Botones -> Gestion Stock [Listar]*/
     #stock article .botones{
         top: 68%;
         bottom: unset;
@@ -453,7 +499,7 @@ footer div:nth-child(3) a{
         right: 37%;
     }
 
-    /*Article | Ajustes Elementos -> Gestion Stock [Listar]*/
+    /* Article | Ajustes Elementos -> Gestion Stock [Listar]*/
     #stock article > img{
         margin: 10% 5%;
         width: 34%;
@@ -528,6 +574,15 @@ footer div:nth-child(3) a{
         width: 50.5%;
     }
 
+    /* Form | Ajustes -> AsigStock*/
+    #asigStock a, form p{
+        font-size: 1.3em;
+    }
+
+    #asigStock input{
+        margin-left: 17%;
+    }
+
     /*Article | Ajustes Class*/
     .bbdd{
         width: 50%;
@@ -537,6 +592,11 @@ footer div:nth-child(3) a{
     
     .bbdd p{
         font-size: 2em;
+    }
+
+    /* Ajuste Clases */
+    .msjError{
+        font-size: 1.5em;
     }
 
     /* Footer | Ajustes Elementos */
