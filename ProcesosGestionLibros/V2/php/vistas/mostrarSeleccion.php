@@ -28,21 +28,21 @@
         <form action="./asignarStock.php" method="POST" id="asigStock">
             <?php
                 require_once('../controladores/cMostrarSeleccion.php');
-                $objControlador = new CMostrarSeleccion('9780987654321');
+                $objControlador = new CMostrarSeleccion($_GET["isbn"]);
                 // Obtener los resultados
                 $datosVld = $objControlador->validarResultSelect();
 
                 // Verificar y contar los resultados
                 if (count($datosVld) > 0) {
                     for ($i = 0; $i < count($datosVld); $i++) {
-                        echo "<input type='checkbox' name='seleccionados[]' value='" . $datosVld[$i]["idReserva"] . "'>";
-                        echo "<label>" . $datosVld[$i]['nombre'] . ' ' . $datosVld[$i]['apellidos'] . ' - ' . $datosVld[$i]["correo"] . ' - ' . $datosVld[$i]['codCurso'] . ' ' . $datosVld[$i]['idClase'] . "</label><br>";
+                        echo "<input type='checkbox' name='seleccionados[]' value='".$datosVld[$i]["idReserva"]."'>";
+                        echo "<label>".$datosVld[$i]['nombre'].' '.$datosVld[$i]['apellidos'].' - '.$datosVld[$i]["correo"].' - '.$datosVld[$i]['codCurso'].' '.$datosVld[$i]['idClase'].' - '.$datosVld[$i]['fechaReserva']."</label><br>";
                     }
-                } else {
-                    echo "No se encontraron resultados.";
-                }
+                } else
+                    echo "<p>No existe ninguna reserva lista para asignar.</p>";
             ?>
             <input type="submit" value="Asignar">
+            <a href="../../html/index.html">Volver</a>
         </form>
     </main>
     <footer>

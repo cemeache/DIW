@@ -12,7 +12,7 @@
             $datos = $this->recibirResultado();
             if (!empty($datos))
                 return $datos;
-            // Devolver un array vacío si no hay datos
+            // Devolver un array vacío si no hay datos [Preguntar Isa]
             return []; 
         }
     
