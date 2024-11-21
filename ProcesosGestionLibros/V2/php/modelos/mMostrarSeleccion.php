@@ -5,7 +5,7 @@
         private $pdo;
 
         public function __construct() {
-            $this->pdo = new Conectar($servidor, $basedatos,$usuario,$contrasenia);
+            $this->pdo = new Conectar();
         }
 
         public function selectCampos($isbn){

@@ -2,7 +2,7 @@
     //Incluimos el fichero de configuración
     require_once("./conexion.php");
 
-    $isbn = '9781234567890';
+    $isbn = '9781122334455';
 
     //Recibir datos del formulario [idReserva de los seleccionados para asignar]
     if(isset($_POST["seleccionados"]))
