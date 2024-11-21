@@ -28,12 +28,18 @@
         <form action="./asignarStock.php" method="POST" id="asigStock">
             <?php
                 require_once('../controladores/cMostrarSeleccion.php');
-                $objCmostrSelec = new CMostrarSeleccion('9781234567890');
-                $datosVld = $objCmostrSelec -> validarResultSelect();
+                $objControlador = new CMostrarSeleccion('9780987654321');
+                // Obtener los resultados
+                $datosVld = $objControlador->validarResultSelect();
 
-                for ($i=0; $i < count($datosVld); $i++) { 
-                    echo "<input type='checkbox' name='seleccionados[]' value='".$datosVld[$i]["idReserva"]."'>";
-                    echo "<label>".$datosVld[$i]['nombre'].' '.$datosVld[$i]['apellidos'].' - '.$datosVld[$i]["correo"].' - '.$datosVld[$i]['codCurso'].' '.$datosVld[$i]['idClase']."</label><br>";
+                // Verificar y contar los resultados
+                if (count($datosVld) > 0) {
+                    for ($i = 0; $i < count($datosVld); $i++) {
+                        echo "<input type='checkbox' name='seleccionados[]' value='" . $datosVld[$i]["idReserva"] . "'>";
+                        echo "<label>" . $datosVld[$i]['nombre'] . ' ' . $datosVld[$i]['apellidos'] . ' - ' . $datosVld[$i]["correo"] . ' - ' . $datosVld[$i]['codCurso'] . ' ' . $datosVld[$i]['idClase'] . "</label><br>";
+                    }
+                } else {
+                    echo "No se encontraron resultados.";
                 }
             ?>
             <input type="submit" value="Asignar">
