@@ -17,13 +17,13 @@
                     ORDER BY reserva.fechaReserva ASC;";
             
             // Preparar la consulta
-            $stmt = $this->pdo->prepare($consulta);
+            $cnsltPrep = $this->pdo->prepare($consulta);
             // Vincular el parámetro :isbn
-            $stmt->bindParam(':isbn', $isbn);
+            $cnsltPrep ->bindParam(':isbn', $isbn);
             // Ejecutar la consulta
-            $stmt->execute();
-            // Devolver los resultados
-            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $cnsltPrep ->execute();
+            // Retornar resultados como un array associativo por filas
+            return $cnsltPrep ->fetchAll(PDO::FETCH_ASSOC);
         }
     }
 ?>

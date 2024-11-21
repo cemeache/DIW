@@ -25,14 +25,17 @@
     <main>
         <h1>LISTADO DE RESERVAS A ASIGNAR</h1>
         <hr>
-        <form action="./asignarStock.php" method="POST" id="asigStock">
+        <form action="../controladores/cUpdateStockAsig.php" method="POST" id="asigStock">
             <?php
                 require_once('../controladores/cMostrarSeleccion.php');
+
+                //Instanciar Controlador
                 $objControlador = new CMostrarSeleccion($_GET["isbn"]);
-                // Obtener los resultados
+
+                // Obtener Resultados Validados
                 $datosVld = $objControlador->validarResultSelect();
 
-                // Verificar y contar los resultados
+                // Mostrar Resultados
                 if (count($datosVld) > 0) {
                     for ($i = 0; $i < count($datosVld); $i++) {
                         echo "<input type='checkbox' name='seleccionados[]' value='".$datosVld[$i]["idReserva"]."'>";
