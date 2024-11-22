@@ -1,5 +1,5 @@
 <?php
-    require_once('../V2/php/config/conectar.php');
+    require_once('../config/conectar.php');
 
     class MSelectDatos extends Conectar{
 
