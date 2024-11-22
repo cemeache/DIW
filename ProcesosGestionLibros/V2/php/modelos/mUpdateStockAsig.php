@@ -13,7 +13,7 @@
 
             // Obtener Stock Actual
             $resultStock = $this->selectStockAct();
-            $this->stock = $resultStock[0]["stock"]; // Corrección: acceder al primer elemento del array
+            $this->stock = $resultStock[0]["stock"]; //--------//
         }
 
         public function transactionUpdates($seleccion){
@@ -59,6 +59,10 @@
             $cnsltPrep ->execute();
             return $cnsltPrep ->fetchAll(PDO::FETCH_ASSOC);
         }
+
+        /*public function selectDatosIdReserva(){
+            $consulta = "SELECT ";
+        }*/
 
     }
 

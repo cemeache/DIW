@@ -26,6 +26,5 @@
             return !empty($this->seleccion) && !empty($this->isbn) ? true : false;
         }
 
-
     }
 ?>
