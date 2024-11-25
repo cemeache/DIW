@@ -53,11 +53,13 @@
                     else
                             $emailStatus = "Correos No Enviados";
                     */
-
+                    $infoReser = $objCUpdate->vSelectDatosIdReserva($i);
+                    $nombre = isset($infoReser['nombre']) ? $infoReser['nombre'] : 'Nombre no disponible';
+                    $apellidos = isset($infoReser['apellidos']) ? $infoReser['apellidos'] : 'Apellidos no disponibles';
                     $emailStatus = isset($resultsEmails[$i]) ? (($resultsEmails[$i][0] && $resultsEmails[$i][1]) ? "Correos Enviados" : "Correos No Enviados") : 
                         "Correos No Enviados";
                     
-                    echo "<p class='error'>Reserva ID: ".$i." - ".($asig ? "Asignado" : "No Asignado")." - ".$emailStatus."</p>";
+                    echo "<p class='msjError'>Reserva ID: ".$i." - ".$nombre.' '.$apellidos.($asig ? " - Asignado" : " - No Asignado")." - ".$emailStatus."</p>";
                 }
             } else {
                 echo "<p class='msjError'>".$datosVld."</p>";

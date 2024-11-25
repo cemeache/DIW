@@ -42,7 +42,7 @@
                     echo "<p>".$datos[$i]["precio"]." €</p>";
                     echo "<p>".$datos[$i]["codCurso"]."</p>";
                     echo "</div>";
-                    echo '<a href="./mostrarSeleccion.php?isbn='.$datos[$i]["isbn"].'">Asignación Manual</a>';
+                    echo '<a href="./mostrarSeleccion.php?isbn='.$datos[$i]["isbn"].'&stock='.$datos[$i]["stock"].'">Asignación Manual</a>';
                     echo '<a href="">Asignación Automática</a>';
                     echo "<p id='infoStock'>".$datos[$i]["stock"]."</p>";
                     echo '<p id="titleStock">LIBROS</p>';
