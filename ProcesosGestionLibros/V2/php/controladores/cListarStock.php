@@ -2,11 +2,7 @@
     require_once('../modelos/mListarStock.php');
 
     class CSelectDatos{ 
-
-        public function __construct() {
-            //Vacio
-        }
-
+        //Validar datos recibidos para poder trabajar con ellos
         public function validarResultSelect() {
             $datos = $this->recibirResultado();
             if (!empty($datos))
@@ -14,7 +10,8 @@
             // Devolver un array vacío si no hay datos [Preguntar Isa]
             return []; 
         }
-    
+        
+        //Recibir resultado consulta
         private function recibirResultado() {
             $objMmostrSelect = new MSelectDatos();
             $datos = $objMmostrSelect->selectCampos();

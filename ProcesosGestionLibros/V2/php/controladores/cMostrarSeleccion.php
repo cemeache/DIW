@@ -8,6 +8,7 @@
             $this->isbn = $isbn;
         }
 
+        //Validar datos para poder trabajar con ellos
         public function validarResultSelect() {
             $datos = $this->recibirResultado();
             if (!empty($datos))
@@ -15,7 +16,8 @@
             // Devolver un array vacío si no hay datos [Preguntar Isa]
             return []; 
         }
-    
+        
+        //Recibir resultado de la consulta
         private function recibirResultado() {
             $objMmostrSelect = new MmostrarSeleccion();
             $datos = $objMmostrSelect->selectCampos($this->isbn);

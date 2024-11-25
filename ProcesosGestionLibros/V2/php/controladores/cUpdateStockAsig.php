@@ -21,6 +21,7 @@
             return !empty($datos) ? $datos : "No hay Stock";
         }
 
+        //Validar datos Seleccion e ISBN
         private function validarSeleccionIsbn(){
             // [condicion ? valor_true : valor_false]
             return !empty($this->seleccion) && !empty($this->isbn) ? true : false;
