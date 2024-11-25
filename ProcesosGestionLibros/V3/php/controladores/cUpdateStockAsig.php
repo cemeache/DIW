@@ -26,5 +26,11 @@
             return !empty($this->seleccion) && !empty($this->isbn) ? true : false;
         }
 
+        public function vSelectDatosIdReserva($idReserva){
+            $objModelo = new MUpdateStockAsig();
+            $infoReser = $objModelo->selectDatosIdReserva($idReserva);
+            return !empty($infoReser) ? $infoReser : [];
+        }
+
     }
 ?>

@@ -5,6 +5,10 @@
 
         public function __construct() {
             require_once('configdb.php');
+            $servidor = "localhost";
+            $usuario = "root";
+            $contrasenia = "";
+            $basedatos = "bdgestionlibros";
             //Terminar concretar try-catch
             try {
                 $this->pdo = new PDO('mysql:host=' . $servidor . ';dbname=' . $basedatos, $usuario, $contrasenia);

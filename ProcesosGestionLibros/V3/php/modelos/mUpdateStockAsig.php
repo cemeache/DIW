@@ -5,7 +5,7 @@
         private $stock;
         private $isbn; //Trait [Buscar Info]
 
-        public function __construct($isbn) {
+        public function __construct($isbn = '') {
             // Llamar Constructor Padre [Conectar]
             parent::__construct();
 
@@ -13,7 +13,7 @@
 
             // Obtener Stock Actual
             $resultStock = $this->selectStockAct();
-            $this->stock = $resultStock[0]["stock"]; //--------//
+            $this->stock = isset($resultStock[0]["stock"]) ? $resultStock[0]["stock"] : 0; //--------//
         }
 
         public function transactionUpdates($seleccion){
@@ -60,9 +60,13 @@
             return $cnsltPrep ->fetchAll(PDO::FETCH_ASSOC);
         }
 
-        /*public function selectDatosIdReserva(){
-            $consulta = "SELECT ";
-        }*/
+        public function selectDatosIdReserva($idReserva){
+            $consulta = "SELECT nombre, apellidos FROM reserva WHERE idReserva = :idReserva";
+            $cnsltPrep = $this->pdo->prepare($consulta);
+            $cnsltPrep->bindParam(':idReserva', $idReserva);
+            $cnsltPrep ->execute();
+            return $cnsltPrep ->fetch(PDO::FETCH_ASSOC);
+        }
 
     }
 
