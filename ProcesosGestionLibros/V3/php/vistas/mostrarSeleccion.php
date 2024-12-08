@@ -49,7 +49,6 @@
             }else   
                 echo "<p class='msjError'>No hay stock.</p>";
         ?>
-            
             <a href="./listarStock.php">Volver</a>
         </form>
     </main>

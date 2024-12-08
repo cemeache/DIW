@@ -9,7 +9,7 @@
         }
 
         public function selectCampos($isbn){
-            // Consulta para seleccionar los campos necesarios de las tablas relacionadas
+            // Consulta para seleccionar los campos necesarios
             $consulta = "SELECT reserva.idReserva, nombre, apellidos, correo, codCurso, idClase, fechaReserva FROM reserva 
                     INNER JOIN reserva_libro ON reserva.idReserva = reserva_libro.idReserva 
                     INNER JOIN libro ON libro.isbn = reserva_libro.isbn

@@ -3,7 +3,7 @@
 
     class MUpdateStockAsig extends Conectar{
         private $stock;
-        private $isbn; //Trait [Buscar Info]
+        private $isbn;
 
         public function __construct($isbn = '') {
             // Llamar Constructor Padre [Conectar]

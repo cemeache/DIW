@@ -65,9 +65,6 @@
                     
             ?>                
                 
-                
-                
-                
         </section>
         <a href="./Buscar.html">VOLVER</a>
     </main>
