@@ -39,18 +39,122 @@ document.getElementById('wrap-reverse').addEventListener('click', () => {
 });
 
 /**/
-// Set gap to 10px for both row and column
+
+document.getElementById('gap0').addEventListener('click', () => {
+    document.getElementById('div-nine').style.gap = '0px';
+});
+
 document.getElementById('gapx').addEventListener('click', () => {
     document.getElementById('div-nine').style.gap = '10px';
 });
 
-// Set gap to 10px for row and 5px for column
 document.getElementById('gapxx').addEventListener('click', () => {
-    document.getElementById('div-nine').style.gap = '10px 5px';
+    document.getElementById('div-nine').style.gap = '20px 5px';
 });
 
-// Set row-gap to 5px and column-gap to 20px
 document.getElementById('rowGap').addEventListener('click', () => {
     document.getElementById('div-nine').style.rowGap = '5px';
-    document.getElementById('div-nine').style.columnGap = '20px';
+    document.getElementById('div-nine').style.columnGap = '50px';
+});
+
+/**/
+
+document.getElementById('start').addEventListener('click', () => {
+    document.getElementById('div-ten').style.justifyContent = 'flex-start';
+});
+
+document.getElementById('end').addEventListener('click', () => {
+    document.getElementById('div-ten').style.justifyContent = 'flex-end';
+});
+
+document.getElementById('center').addEventListener('click', () => {
+    document.getElementById('div-ten').style.justifyContent = 'center';
+});
+
+document.getElementById('space-between').addEventListener('click', () => {
+    document.getElementById('div-ten').style.justifyContent = 'space-between';
+});
+
+document.getElementById('space-around').addEventListener('click', () => {
+    document.getElementById('div-ten').style.justifyContent = 'space-around';
+});
+
+document.getElementById('space-evenly').addEventListener('click', () => {
+    document.getElementById('div-ten').style.justifyContent = 'space-evenly';
+});
+
+/**/
+
+const container = document.getElementById('div-twelve');
+
+// Botones justify-content
+document.getElementById('twelve-start').addEventListener('click', () => {
+    container.style.justifyContent = 'flex-start';
+});
+
+document.getElementById('twelve-end').addEventListener('click', () => {
+    container.style.justifyContent = 'flex-end';
+});
+
+document.getElementById('twelve-center').addEventListener('click', () => {
+    container.style.justifyContent = 'center';
+});
+
+document.getElementById('twelve-space-between').addEventListener('click', () => {
+    container.style.justifyContent = 'space-between';
+});
+
+document.getElementById('twelve-space-around').addEventListener('click', () => {
+    container.style.justifyContent = 'space-around';
+});
+
+document.getElementById('twelve-space-evenly').addEventListener('click', () => {
+    container.style.justifyContent = 'space-evenly';
+});
+
+// Botones align-items
+
+document.getElementById('twelve-align-start').addEventListener('click', () => {
+    container.style.alignItems = 'flex-start';
+});
+
+document.getElementById('twelve-align-end').addEventListener('click', () => {
+    container.style.alignItems = 'flex-end';
+});
+
+document.getElementById('twelve-align-center').addEventListener('click', () => {
+    container.style.alignItems = 'center';
+});
+
+document.getElementById('twelve-align-baseline').addEventListener('click', () => {
+    container.style.alignItems = 'baseline';
+});
+
+/* */ 
+
+const containerThirteen = document.getElementById('div-thirteen');
+
+// Botones align-content
+document.getElementById('thirteen-content-start').addEventListener('click', () => {
+    containerThirteen.style.alignContent = 'flex-start';
+});
+
+document.getElementById('thirteen-content-end').addEventListener('click', () => {
+    containerThirteen.style.alignContent = 'flex-end';
+});
+
+document.getElementById('thirteen-content-center').addEventListener('click', () => {
+    containerThirteen.style.alignContent = 'center';
+});
+
+document.getElementById('thirteen-content-space-between').addEventListener('click', () => {
+    containerThirteen.style.alignContent = 'space-between';
+});
+
+document.getElementById('thirteen-content-space-around').addEventListener('click', () => {
+    containerThirteen.style.alignContent = 'space-around';
+});
+
+document.getElementById('thirteen-content-stretch').addEventListener('click', () => {
+    containerThirteen.style.alignContent = 'stretch';
 });
