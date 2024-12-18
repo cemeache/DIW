@@ -100,3 +100,35 @@ div a{
     flex-shrink: 1;
     /* flex-basis: 0; */
 }
+
+/*ESTILOS #div-six*/
+#div-six{
+    display: inline-flex;
+}
+
+#div-six a{
+    width: 10vw;
+}
+
+/**/
+
+#div-seven,
+#div-eigth{
+    display: flex;
+}
+
+#div-seven a{
+    width: 10vw;
+}
+
+/**/
+
+#div-eigth{
+    width: 200px;
+}
+
+#div-eigth a{
+    width: 50%;
+}
+
+/**/
