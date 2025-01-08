@@ -20,7 +20,6 @@ div a{
 #div-one a{
     flex-grow: 1;
     flex-shrink: 1;
-    /*flex-basis: 0; /*Flex-basis: 0 --> Para que se repartan el espacio disponible*/
 }
 
 /*ESTILOS #div-two*/
@@ -31,7 +30,6 @@ div a{
 #div-two a{
     flex-grow: 1;
     flex-shrink: 1;
-    /* flex-basis: 0; */
 }
 
 /*ESTILOS #div-three*/
@@ -42,25 +40,21 @@ div a{
 #div-three a:nth-of-type(1){
     flex-grow: 1;
     flex-shrink: 1;
-    /* flex-basis: 0; */
 }
 
 #div-three a:nth-of-type(2){
     flex-grow: 2;
     flex-shrink: 2;
-    /* flex-basis: 0; */
 }
 
 #div-three a:nth-of-type(3){
     flex-grow: 1;
     flex-shrink: 1;
-    /* flex-basis: 0; */
 }
 
 #div-three a:nth-of-type(4){
     flex-grow: 2;
     flex-shrink: 1;
-    /* flex-basis: 0; */
 }
 
 /*ESTILOS #div-four*/
@@ -73,13 +67,11 @@ div a{
 #div-four a:nth-of-type(4){
     flex-grow: 1;
     flex-shrink: 1;
-    /* flex-basis: 0; */
 }
 
 #div-four a:nth-child(2){
     flex-grow: 2;
     flex-shrink: 2;
-    /* flex-basis: 0; */
 }
 
 /*ESTILOS #div-five*/
@@ -92,13 +84,11 @@ div a{
 #div-five a:nth-child(3){
     flex-grow: 1;
     flex-shrink: 1;
-    /* flex-basis: 0; */
 }
 
 #div-five a:nth-child(4){
     flex-grow: 4;
     flex-shrink: 1;
-    /* flex-basis: 0; */
 }
 
 /*ESTILOS #div-six*/
@@ -132,3 +122,99 @@ div a{
 }
 
 /**/
+
+#div-nine{
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+}
+
+#div-nine a{
+    width: 30%;
+}
+
+/*ESTILOS #div-ten*/
+#div-ten {
+    display: flex;
+    width: 95%;
+    height: 10vw;
+}
+
+#div-ten a {
+    width: 5vw;
+    height: 5vw;
+}
+
+/*ESTILOS #div-eleven*/
+.stretch {
+    align-items: stretch;
+}
+
+#div-eleven {
+    display: flex;
+    width: 95%;
+    height: 15vw;
+}
+
+#div-eleven a {
+    width: 5vw;
+    height: 5vw;
+}
+
+#div-eleven a:nth-of-type(1) {
+    height: 5vw;
+    padding-top: 5%;
+}
+
+#div-eleven a:nth-of-type(2) {
+    height: 7vw;
+    padding-top: 4%;
+}
+
+#div-eleven a:nth-of-type(3) {
+    height: 6vw;
+    padding-top: 1%;
+}
+
+#div-eleven a:nth-of-type(4) {
+    height: 8vw;
+    padding-top: 3%;
+}
+
+/*ESTILOS #div-twelve*/
+#div-twelve {
+    display: flex;
+    height: 25vh; 
+}
+
+#div-twelve a {
+    width: 5vh;
+}
+
+#div-twelve a:nth-of-type(1) {
+    height: 5vh;
+}
+
+#div-twelve a:nth-of-type(2) {
+    height: 7vh;
+}
+
+#div-twelve a:nth-of-type(3) {
+    height: 6vh;
+}
+
+#div-twelve a:nth-of-type(4) {
+    height: 8vh;
+}
+
+/*ESTILOS #div-thirteen*/
+#div-thirteen {
+    display: flex;
+    flex-wrap: wrap;
+    height: 25vh; 
+}
+
+#div-thirteen a {
+    width: 5vh;
+    height: 5vh;
+}
