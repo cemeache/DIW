@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  background-color: #f2f2f2;
+  font-family: "Montserrat", serif;
+}
+
+/*-- header --*/
+header .nav {
+  background-color: #fff;
+  min-height: 80px;
+  overflow: hidden;
+}
+
+header .logo h2,
+header .logo p {
+  font-size: 1em;
+  display: inline-block;
+}
+
+header .logo .icono {
+  color: #bfbfbf;
+}
+
+/*-- Nav --*/
+nav.menu a:nth-child(1) {
+  background-color: #3da5e2;
+}
+
+nav.menu a:nth-child(1):hover {
+  background-color: #1ba0ef;
+}
+
+nav.menu a:nth-child(2) {
+  background-color: #005385;
+}
+
+nav.menu a:nth-child(2):hover {
+  background-color: #00426a;
+}
+
+nav.menu a:nth-child(3) {
+  background-color: #003855;
+}
+
+nav.menu a:nth-child(3):hover {
+  background-color: #002d44;
+}
+
+/*-- Portfolio --*/
+.portfolio {
+  border-top: 5px solid #3da5e2;
+  background: #fff;
+}
+
+.portfolio h2 {
+  color: #3da5e2;
+  font-weight: 300;
+}
+
+.portfolio .galeria .contenedor-imagen {
+  max-height: 180px;
+  overflow: hidden;
+}
+
+.portfolio .galeria .contenedor-imagen a {
+  background: #3da5e2;
+  display: inline-block;
+}
+
+.portfolio .galeria .contenedor-imagen:hover img {
+  opacity: .3;
+}
+
+/* Ventana Modal */
+.modal-dialog {
+  max-width: 1000px;
+}
+
+/* Acerca de */
+.acerca-de .foto p {
+  color: #545454;
+  font-weight: 300;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+}
+
+.acerca-de .info h2 {
+  color: #005385;
+  font-weight: 300;
+  font-size: 2.2em;
+}
+
+.acerca-de .info label {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #005385;
+}
+
+.acerca-de .info .progress {
+  background: #005385;
+  border-radius: 0;
+  height: 1.6em;
+}
+
+.acerca-de .info .progress .progress-bar {
+  background: #3da5e2; 
+}
+
+/* Contacto */
+.contacto {
+  border-top: 1px solid #cbcbcb;
+  border-bottom: 1px solid #cbcbcb;
+}
+
+.contacto h2 {
+  color: #003855;
+  text-align: center;
+  font-weight: 300;
+  font-style: 1.4em;
+}
+
+.contacto .col-12 .form-floating textarea {
+  min-height: 150px;
+  height: 150px;
+  min-height: 250px;
+}
+
+/*-- Footer --*/
+.redes-sociales a {
+  width: 100px;
+  height: 100px;
+  color: #fff;
+  /* background: #cbcbcb; */
+  display: inline-block;
+  margin: 0 20px;
+  text-decoration: none;
+  border-radius: 100px;
+  transition: all .3s ease;
+}
+
+.redes-sociales a svg {
+  width: 40px;
+  height: 40px;
+}
+
+.redes-sociales .col-auto:nth-child(1) a {
+  background: #1da1f2;
+}
+
+.redes-sociales .col-auto:nth-child(2) a {
+  background: #833ab4;
+}
+
+.redes-sociales .col-auto:nth-child(3) a {
+  background: #3b5998;
+}
+
+/*-- MediaQueries --*/
+
+/* Dispositivo sm */
+@media screen and (max-width: 576px){
+  .redes-sociales a {
+    width: 50px;
+    height: 50px;
+  }
+
+  .redes-sociales a svg{
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Dispositivo lg */
+@media screen and (max-width: 992px){
+  .logo{
+    height: 76px;
+  }
+
+  header .menu {
+    min-height: 76px;
+  }
+
+  header .menu a {
+    width: 100%;
+  }
+
+  .portfolio .galeria .contenedor-imagen:nth-child(1) {
+    order:1;
+  }
+  .portfolio .galeria .contenedor-imagen:nth-child(2) {
+    order:3;
+  }
+  .portfolio .galeria .contenedor-imagen:nth-child(3) {
+    order:6;
+  }
+  .portfolio .galeria .contenedor-imagen:nth-child(4) {
+    order:2;
+  }
+  .portfolio .galeria .contenedor-imagen:nth-child(5) {
+    order:5;
+  }
+  .portfolio .galeria .contenedor-imagen:nth-child(6) {
+    order:4;
+  }
+  .portfolio .galeria .contenedor-imagen:nth-child(7) {
+    order:7;
+  }
+
+}

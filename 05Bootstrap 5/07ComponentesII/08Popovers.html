@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Popovers</title>
+
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row" style="margin-top: 200px;">
+                <div class="col">
+                    <!-- data-bs-toggle | Función Bootstrap al clicar -->
+                    <!-- title | Título del popover -->
+                    <!-- data-bs-content | Contenido del popover -->
+                    <!-- data-bs-placemenet | Lugar donde queremos que aparezca -->
+                    <button
+                        class="btn btn-primary btn-lg"
+                        data-bs-toggle="popover"
+                        title="Título del Popover"
+                        data-bs-content="Lorem ipsum dolor sit amet."
+                        data-bs-placement="top"
+                    >Popover Top</button>
+                    <button
+                        class="btn btn-primary btn-lg"
+                        data-bs-toggle="popover"
+                        title="Título del Popover"
+                        data-bs-content="Lorem ipsum dolor sit amet."
+                        data-bs-placement="bottom"
+                    >Popover Bottom</button>
+                    <button
+                        class="btn btn-primary btn-lg"
+                        data-bs-toggle="popover"
+                        title="Título del Popover"
+                        data-bs-content="Lorem ipsum dolor sit amet."
+                        data-bs-placement="left"
+                    >Popover Left</button>
+                    <button
+                        class="btn btn-primary btn-lg"
+                        data-bs-toggle="popover"
+                        title="Título del Popover"
+                        data-bs-content="Lorem ipsum dolor sit amet."
+                        data-bs-placement="right"
+                    >Popover Right</button>
+                </div>
+                <div class="col-12" style="margin-top: 200px;">
+                    <!-- Cuando utilizamos a como btn, hay que poner el role -->
+                    <!-- data-bs-trigger | Al hacer clic en el popover, este desaparece -->
+                    <a
+                        href="#"
+                        role="button"
+                        tabindex="0"
+                        class="btn btn-primary btn-lg"
+                        data-bs-toggle="popover"
+                        title="Título del Popover"
+                        data-bs-content="Lorem ipsum dolor sit amet."
+                        data-bs-placement="top"
+                        data-bs-trigger="focus"
+                    >Popover Top</a>
+                </div>
+            </div>
+        </div>
+
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+            var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+                return new bootstrap.Popover(popoverTriggerEl)
+            })
+        </script>
+    </body>
+</html>

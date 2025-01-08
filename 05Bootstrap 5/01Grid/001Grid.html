@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grid</title>
+
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <style>
+            .row > div {
+                background: #f2f2f2;
+                padding: 40px;
+                margin: 10px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- El container, es el contenedor principal, en el iran todas las filas y columnas -->
+        <!-- Con el container podemos centrar nuestra página -->
+        <div class="container"> <!-- El container-fluid, ocupa todo el ancho de la pantalla -->
+            <!-- La clase row, son grupos HORIZONTALES de columnas -->
+             
+            <!-- Las columnas se dividen en 12 partes -->
+
+            <!-- Los tamaños de columna en Boostrap 5 son:
+                .col        Extra Pequeño (Extra Small) - Teléfono Vertical             <576px
+                .col-sm     Pequeño (Small) - Teléfono Horizontal                       >=576px && <768px
+                .col-md     Mediano (Medium) - Tablet                                   >=768px && <992px
+                .col-lg     Grande (Large) - Portátil                                   >=992px && <1200px
+                .col-xl     Extra Grande (Extra Large) - Ordenador                      >=1200px && <1400px
+                .col-xxl    Extra Extra Grande (Extra Extra Large) - Pantalla Grande    >=1400px
+            -->
+
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <h1>Hola Mundo</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
+                    </p>
+                    <button class="btn btn-primary">Ver Más</button>
+                </div>
+                <div class="col-12 col-md-6">
+                    <h1>Hola Mundo</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
+                    </p>
+                    <button class="btn btn-primary">Ver Más</button>
+                </div>
+                <div class="col-12">
+                    <h1>Hola Mundo</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
+                    </p>
+                    <button class="btn btn-primary">Ver Más</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="../js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

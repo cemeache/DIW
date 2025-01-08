@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tablas</title>
+
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                <!-- Colores -->
+				<!-- Tenemos variantes disponibles para toda la tabla, toda una fila, o una celda -->
+				<!-- 
+					.table-primary
+					.table-secondary
+					.table-success
+					.table-danger
+					.table-warning
+					.table-info
+
+					.table-light
+					.table-dark
+				-->
+
+
+				<!-- Clases de tablas -->
+				<!-- Estas clases tambien estan disponbiles para los diferentes colores -->
+				<!-- 
+					.table-striped - Colorea en formato zebra para mejor lectura.
+					.table-hover - Colorea las filas sobre las que pasamos el cursor.
+					.table-bordered - Agrega bordes a la tabla.
+					.border-danger - Colorea el borde.
+					.table-borderless - Quita los bordes, incluso de las filas.
+					.table-sm - Hace una tabla mas compacta quitandole padding a las celdas
+				-->
+
+				<!-- Tabla Responsiva -->
+				<!-- Podemos encerrar la tabla en un div con la clase .table-responsive para hacerla responsiva -->
+
+                    <!-- .table-responsive | Permite hacer scroll solo en el div donde se encuentra la tabla -->
+                    <div class="table-responsive">
+                        <!-- .table |  Boostrap aplica los estilos de table por defecto-->
+                        <!-- .table-striped | Filas pares con otro color de background -->
+                        <!-- .table-hover | Efecto al pasar por encima de las filas -->
+                        <!-- .table-sm | Compacta la tabla quitando espacios innecesarios -->
+                        <table class="table table-striped table-hover table-bordered">
+                            <caption>Lista de Amigos</caption>
+                            <thead>
+                                <!-- .table-dark | Background negro -->
+                                <tr class="table-dark">
+                                    <th>Nombre</th>
+                                    <th>Edad</th>
+                                    <th>Pais</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Celia</td>
+                                    <td>19</td>
+                                    <td>España</td>
+                                </tr>
+                                <tr class="table-primary">
+                                    <td>Vero</td>
+                                    <!-- .table-active | Resalta la celda -->
+                                    <td class="table-active">33</td>
+                                    <td>España</td>
+                                </tr>
+                                <tr>
+                                    <td>Irene</td>
+                                    <td>18</td>
+                                    <td>España</td>
+                                </tr>
+                                <tr>
+                                    <td>Chary</td>
+                                    <td>39</td>
+                                    <td>España</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

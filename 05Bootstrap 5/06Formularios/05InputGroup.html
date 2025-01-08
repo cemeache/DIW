@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Input Group</title>
+
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row mt-3">
+                <div class="col-6">
+                    <!-- Input Group -->
+                    <div class="input-group mb-3">
+                        <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre" aria-label="Nombre">
+                        <span class="input-group-text">@gmail.com</span>
+                    </div>
+
+                    <!-- TextArea -->
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Notas:</span>
+                        <textarea name="" id="label-notas" class="form-control" aria-label="Notas"></textarea>
+                    </div>
+
+                    <!-- Input Group con Múltiples Elementos-->
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Nombre</span>
+                        <input type="text" name="nombre" id="nombre" class="form-control" aria-label="Nombre">
+                        <span class="input-group-text">Apellido</span>
+                        <input type="text" name="apellido" id="apellido" class="form-control" aria-label="Apellido">
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="input-group input-group-sm mb-3">
+                        <span class="input-group-text">Pequeño</span>
+                        <input type="text" class="form-control" aria-label="Pequeño">
+                    </div>
+                    <div class="input-group input-group-lg mb-3">
+                        <span class="input-group-text">Grande</span>
+                        <input type="text" class="form-control" aria-label="Grande">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="pais" class="input-group-text">Pais</label>
+                        <select name="pais" id="pais" class="form-select">
+                            <option value="spain">España</option>
+                            <option value="portugal">Portugal</option>
+                            <option value="francia">Francia</option>
+                        </select>
+                        <button class="btn btn-primary">Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

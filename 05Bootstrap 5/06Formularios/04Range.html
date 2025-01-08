@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Range</title>
+
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row mt-3">
+                <div class="col-6">
+                    <!-- Debe ir en un Form -->
+                    <label for="rango" class="form-label">Prepuesto</label>
+                     <!-- step = "2" | La barra avanza de 2 en 2 -->
+                    <input type="range" name="rango" id="rango" class="form-range" min="0" max="10" step="2">
+                    <div class="d-flex justify-content-between">
+                        <p class="form-text">0€</p>
+                        <p class="form-text">10€</p>
+                    </div>
+                    <!-- <input type="range" name="rango" id="rango" class="form-range" min="0" max="10" step="2" disabled> -->
+                </div>
+            </div>
+        </div>
+
+        <script src="../js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Columnas Anidadas</title>
+
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <style>
+            .container {
+                margin-top: 20px;
+            }
+
+            .row {
+                background: #e8e8e8;
+            }
+
+            .columna {
+                background: #f2f2f2;
+                text-align: center;
+                border: 1px solid #8d8d8d;
+            }
+
+            .colInt {
+                background: #e8e8e8;
+                border: 1px solid #8d8d8d;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md columna"> <!-- If col [no -X] se reparten el espacio restante -->
+                    Columna #1 
+                    <div class="row">
+                        <div class="colInt col-12 col-md-6">
+                            Columnas #1.1
+                        </div>
+                        <div class="colInt col-12 col-md-6">
+                            Columnas #1.2
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md columna">
+                    Columna #2
+                    <div class="row">
+                        <div class="colInt col-12 col-md-6">
+                            Columnas #2.1
+                        </div>
+                        <div class="colInt col-12 col-md-6">
+                            Columnas #2.2
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

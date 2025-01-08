@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gutters</title>
+
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <style>
+            .row{
+                margin-top: 20px;
+                background: #e8e8e8;
+            }
+
+            .contenido{
+                background: #f2f2f2;
+                padding: 10px;
+                border: 1px solid #4d5061;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <!-- Podemos establecer diferentes tamaños de gutters -->
+            <!-- g-0    No Gutter -->
+            <!-- gx-5   Gutter Horizontal [Eje X] -->
+            <!-- gy-5   Gutter Vertical [Eje Y] -->
+
+            <!-- g-0 -->
+            <div class="row g-0">
+                <div class="col-6">
+                    <div class="contenido">Columna 1</div>
+                </div>
+                <div class="col-6">
+                    <div class="contenido">Columna 2</div>
+                </div>
+                <div class="col-6">
+                    <div class="contenido">Columna 3</div>
+                </div>
+                <div class="col-6">
+                    <div class="contenido">Columna 4</div>
+                </div>
+            </div>
+
+            <!-- gx-5 && gy-5 -->
+            <div class="row gx-5 gy-5">
+                <div class="col-6">
+                    <div class="contenido">Columna 1</div>
+                </div>
+                <div class="col-6">
+                    <div class="contenido">Columna 2</div>
+                </div>
+                <div class="col-6">
+                    <div class="contenido">Columna 3</div>
+                </div>
+                <div class="col-6">
+                    <div class="contenido">Columna 4</div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

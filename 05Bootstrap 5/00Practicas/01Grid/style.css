@@ -1,0 +1,39 @@
+body {
+    background-color: #e6e6e6;
+}
+
+.row {
+    margin-bottom: 2%;
+}
+
+header {
+    background: #9aca40 ;
+    color: #fff;
+    padding: 2%;
+}
+
+main {
+    background: #fff;
+    padding: 2% 0;
+    text-align: justify;
+}
+
+aside {
+    color: #00547b;
+    background: #b1e2f987;
+    padding: 4.5% 0;
+}
+
+.columnas {
+    background: #3963d7;
+    color: #fff;
+    padding: 2%;
+    text-align: justify;
+}
+
+footer{
+    background-color: #000;
+    color: #fff;
+    padding: 2% 0;
+    margin-bottom: unset !important;
+}
