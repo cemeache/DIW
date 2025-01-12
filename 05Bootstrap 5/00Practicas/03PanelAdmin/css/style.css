@@ -1,1 +1,48 @@
-/* d */
+body {
+	background: #f2f2f2;
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* --- --- BARRA LATERAL --- --- */
+aside {
+    background: #262a34;
+    color: #fff;
+    min-width: 300px;
+    min-height: 100vh;
+}
+
+aside a {
+    color: #fff;
+}
+
+/* --- LOGO --- */
+aside h2 {
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-weight: 300;
+}
+
+/* --- MENU --- */
+aside a {
+    display: block;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(255,255,255, .1);
+}
+
+aside a:hover {
+    background: #35ae6b;
+}
+
+aside a svg {
+    margin-right: 10px;
+}
+
+/* --- MAIN --- */
